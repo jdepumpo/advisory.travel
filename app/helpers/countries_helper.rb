@@ -4,13 +4,13 @@ module CountriesHelper
   end
 
   def advisory_level_color(advisory)
-    if advisory.level == 1
+    if advisory && advisory.level == 1
       return "bg-green-400"
-    elsif advisory.level == 2
+    elsif advisory && advisory.level == 2
       return "bg-yellow-400"
-    elsif advisory.level == 3
+    elsif advisory && advisory.level == 3
       return "bg-orange-400"
-    elsif advisory.level == 4
+    elsif advisory && advisory.level == 4
       return "bg-red-400"
     else
       return ""
@@ -18,13 +18,13 @@ module CountriesHelper
   end
 
   def advisory_level_name(advisory)
-    if advisory.level == 1
+    if advisory && advisory.level == 1
       return "Normal Precaution"
-    elsif advisory.level == 2
+    elsif advisory && advisory.level == 2
       return "Increased Caution"
-    elsif advisory.level == 3
+    elsif advisory && advisory.level == 3
       return "Reconsider Travel"
-    elsif advisory.level == 4
+    elsif advisory && advisory.level == 4
       return "Do Not Travel"
     else
       return ""

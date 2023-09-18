@@ -33,8 +33,9 @@
               <%= country.region %>
             </td>
             <td class="text-center">
-              <span class="px-4 py-2 rounded <%= country.advisories.first ? advisory_level_color(country.advisories.first) : "" %>">
-                <%== country.advisories.first ? advisory_level_name(country.advisories.first) : "" %>
+              <% country_advisory = country.advisories.first || nil %>
+              <span class="px-4 py-2 rounded <%= advisory_level_color(country_advisory) %>">
+                <%== advisory_level_name(country_advisory) %>
               </span>
             </td>
           </tr>
