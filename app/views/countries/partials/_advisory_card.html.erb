@@ -1,0 +1,15 @@
+<section class="card my-4 col-span-2">
+  <% @advisories.each do |advisory| %>
+    <div class="card-title">
+      <h2>Travel Advisory</h2>
+      <span class="p-2 rounded font-semibold <%= advisory_level_color(advisory) %>"><%= advisory_level_name(advisory) %></span>
+    </div>
+    <div class="card-subtitle">
+      <p>Issued Yesterday</p>
+      <hr />
+    </div>
+    <div class="card-body">
+      <%== advisory.body %>
+    </div>
+  <% end %>
+</section>

@@ -1,0 +1,6 @@
+<%= link_to "World", countries_path %> &gt; <%= link_to @country.region, countries_path("q[name_or_region_start]": @country.region) %> &gt; <%= @country_info.subregion %>
+
+<div class="grid grid-flow-col grid-cols-3 gap-2 md:gap-4">
+  <%= render "/countries/partials/country_summary" %>
+  <%= render "/countries/partials/advisory_card" %>
+</div>

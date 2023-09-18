@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   root "home#index"
 
+  resources :countries, only: %i[index show]
   resources :articles
   resource :user, only: %i[edit update destroy]
   resources :users, only: %i[index show]

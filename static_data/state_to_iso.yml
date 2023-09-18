@@ -1,0 +1,840 @@
+---
+- Name: Afghanistan
+  Tag: AF
+  ISO: AF
+- Name: Aland Islands
+  Tag: FI
+  ISO: AX
+- Name: Albania
+  Tag: AL
+  ISO: AL
+- Name: Aleutian Islands
+  Tag: US
+- Name: Algeria
+  Tag: AG
+  ISO: DZ
+- Name: American Samoa
+  Tag: AS
+- Name: Andaman Islands
+  Tag: IN
+- Name: Andorra
+  Tag: AN
+  ISO: AD
+- Name: Angola
+  Tag: AO
+  ISO: AO
+- Name: Anguilla
+  Tag: AV
+  ISO: AI
+- Name: Annobon
+  Tag: EK
+- Name: Antarctica
+  Tag: AY
+  ISO: AQ
+- Name: Antigua and Barbuda
+  Tag: AC
+  ISO: AG
+- Name: Antipodes Islands
+  Tag: NZ
+- Name: Argentina
+  Tag: AR
+  ISO: AR
+- Name: Armenia
+  Tag: AM
+  ISO: AM
+- Name: Aruba
+  Tag: AA
+  ISO: AW
+- Name: Ascension Island
+  Tag: SH
+- Name: Ashmore and Cartier Islands
+  Tag: AS
+- Name: Auckland Islands
+  Tag: NZ
+- Name: Australia
+  Tag: AS
+  ISO: AU
+- Name: Austria
+  Tag: AU
+  ISO: AT
+- Name: Azerbaijan
+  Tag: AJ
+  ISO: AZ
+- Name: Azores
+  Tag: PO
+- Name: Bahamas, The
+  Tag: BF
+  ISO: BS
+- Name: Bahrain
+  Tag: BA
+  ISO: BH
+- Name: Baker Island
+  Tag: FQ
+- Name: Balearic Islands
+  Tag: SP
+- Name: Bangladesh
+  Tag: BG
+  ISO: BD
+- Name: Barbados
+  Tag: BB
+- Name: Bassas da India
+  Tag: BS
+- Name: Belarus
+  Tag: BO
+  ISO: BY
+- Name: Belgium
+  Tag: BE
+  ISO: BE
+- Name: Belize
+  Tag: BH
+  ISO: BZ
+- Name: Benin
+  Tag: BN
+  ISO: BJ
+- Name: Bermuda
+  Tag: BD
+  ISO: BM
+- Name: Bhutan
+  Tag: BT
+  ISO: BT
+- Name: Bolivia
+  Tag: BL
+  ISO: BO
+- Name: Bosnia and Herzegovina
+  Tag: BK
+  ISO: BA
+- Name: Botswana
+  Tag: BC
+  ISO: BW
+- Name: Bounty Islands
+  Tag: NZ
+- Name: Bouvet Island
+  Tag: BV
+  ISO: BV
+- Name: Brazil
+  Tag: BR
+  ISO: BR
+- Name: British Virgin Islands
+  Tag: VI
+  ISO: VG
+- Name: British Indian Ocean Territory
+  Tag: IO
+  ISO: IO
+- Name: Brunei
+  Tag: BX
+  ISO: BN
+- Name: Bulgaria
+  Tag: BU
+  ISO: BG
+- Name: Burkina Faso
+  Tag: UV
+  ISO: BF
+- Name: Burma
+  Tag: BM
+  ISO: MM
+- Name: Burundi
+  Tag: BY
+  ISO: BI
+- Name: Cambodia
+  Tag: CB
+  ISO: KH
+- Name: Cameroon
+  Tag: CM
+  ISO: CM
+- Name: Canada
+  Tag: CA
+  ISO: CA
+- Name: Canary Islands
+  Tag: SP
+  ISO: IC
+- Name: Cape Verde
+  Tag: CV
+  ISO: CV
+- Name: Cayman Islands
+  Tag: CJ
+  ISO: KY
+- Name: Central African Republic
+  Tag: CT
+  ISO: CF
+- Name: Chad
+  Tag: CD
+  ISO: TD
+- Name: Chagos Archipelago
+  Tag: IO
+- Name: Chatham Islands
+  Tag: NZ
+- Name: Chile
+  Tag: CI
+  ISO: CL
+- Name: China
+  Tag: CH
+  ISO: CN
+- Name: Christmas Island
+  Tag: KT
+  ISO: CX
+- Name: Clipperton Island
+  Tag: IP
+- Name: Cocos (Keeling) Islands
+  Tag: CK
+  ISO: CC
+- Name: Colombia
+  Tag: CO
+  ISO: CO
+- Name: Comoros
+  Tag: CN
+  ISO: KM
+- Name: Congo (Brazzaville)
+  Tag: CF
+  ISO: CG
+- Name: Congo (Kinshasa)
+  Tag: CG
+  ISO: CD
+- Name: Cook Islands
+  Tag: CW
+  ISO: CK
+- Name: Coral Sea Islands
+  Tag: CR
+- Name: Corsica
+  Tag: FR
+- Name: Costa Rica
+  Tag: CS
+  ISO: CR
+- Name: Cote D’Ivoire
+  Tag: IV
+  ISO: CI
+- Name: Crete
+  Tag: GR
+- Name: Croatia
+  Tag: HR
+  ISO: HR
+- Name: Cuba
+  Tag: CU
+  ISO: CU
+- Name: Curaçao
+  Tag: UC
+  ISO: CW
+- Name: Cyprus
+  Tag: CY
+  ISO: CY
+- Name: Czech Republic
+  Tag: EZ
+  ISO: CZ
+- Name: Denmark
+  Tag: DA
+  ISO: DK
+- Name: Diego Garcia
+  Tag: IO
+  ISO: IO
+- Name: Djibouti
+  Tag: DJ
+  ISO: DJ
+- Name: Dominica
+  Tag: DO
+  ISO: DM
+- Name: Dominican Republic
+  Tag: DR
+  ISO: DO
+- Name: Ecuador
+  Tag: EC
+  ISO: EC
+- Name: Egypt
+  Tag: EG
+  ISO: EG
+- Name: El Salvador
+  Tag: ES
+  ISO: SV
+- Name: Equatorial Guinea
+  Tag: EK
+  ISO: GQ
+- Name: Eritrea
+  Tag: ER
+  ISO: ER
+- Name: Estonia
+  Tag: EN
+  ISO: EE
+- Name: Ethiopia
+  Tag: ET
+  ISO: ET
+- Name: Europa
+  Tag: EU
+- Name: Falkland Islands (Islas Malvinas)
+  Tag: FK
+  ISO: FK
+- Name: Faroe Islands
+  Tag: FO
+  ISO: FO
+- Name: Fiji
+  Tag: FJ
+  ISO: FJ
+- Name: Finland
+  Tag: FI
+  ISO: FI
+- Name: France
+  Tag: FR
+  ISO: FR
+- Name: French Guiana
+  Tag: FG
+  ISO: GF
+- Name: French Polynesia
+  Tag: FP
+  ISO: PF
+- Name: French Southern and Antarctic Lands
+  Tag: FS
+  ISO: TF
+- Name: Gabon
+  Tag: GB
+  ISO: GA
+- Name: Gambia, The
+  Tag: GA
+  ISO: GM
+- Name: Gaza Strip
+  Tag: GZ
+  ISO: PS
+- Name: Georgia
+  Tag: GG
+  ISO: GE
+- Name: Germany
+  Tag: GM
+  ISO: DE
+- Name: Ghana
+  Tag: GH
+  ISO: GH
+- Name: Gibraltar
+  Tag: GI
+  ISO: GI
+- Name: Glorioso Islands
+  Tag: GO
+- Name: Gough Island
+  Tag: SH
+- Name: Greece
+  Tag: GR
+  ISO: GR
+- Name: Greenland
+  Tag: GL
+  ISO: GL
+- Name: Grenada
+  Tag: GJ
+  ISO: GD
+- Name: Guadeloupe
+  Tag: GP
+  ISO: GP
+- Name: Guam
+  Tag: GQ
+  ISO: GU
+- Name: Guatemala
+  Tag: GT
+  ISO: GT
+- Name: Guernsey
+  Tag: GK
+  ISO: GG
+- Name: Guinea
+  Tag: GV
+  ISO: GN
+- Name: Guinea-Bissau
+  Tag: GW
+  ISO: GW
+- Name: Guyana
+  Tag: GY
+  ISO: GY
+- Name: Haiti
+  Tag: HA
+  ISO: HT
+- Name: Heard Island and McDonald Islands
+  Tag: HM
+  ISO: HM
+- Name: Honduras
+  Tag: HO
+  ISO: HN
+- Name: Hong Kong
+  Tag: HK
+  ISO: HK
+- Name: Howland Island
+  Tag: HQ
+- Name: Hungary
+  Tag: HU
+  ISO: HU
+- Name: Iceland
+  Tag: IC
+  ISO: IS
+- Name: India
+  Tag: IN
+  ISO: IN
+- Name: Indonesia
+  Tag: ID
+  ISO: ID
+- Name: Iran
+  Tag: IR
+  ISO: IR
+- Name: Iraq
+  Tag: IZ
+  ISO: IQ
+- Name: Ireland
+  Tag: EI
+  ISO: IE
+- Name: Israel
+  Tag: IS
+  ISO: IL
+- Name: Italy
+  Tag: IT
+  ISO: IT
+- Name: Jamaica
+  Tag: JM
+  ISO: JM
+- Name: Jan Mayen
+  Tag: JN
+- Name: Japan
+  Tag: JA
+  ISO: JP
+- Name: Jarvis Island
+  Tag: DQ
+- Name: Jersey
+  Tag: JE
+  ISO: JE
+- Name: Johnston Atoll
+  Tag: JQ
+- Name: Jordan
+  Tag: JO
+  ISO: JO
+- Name: Juan de Nova Island
+  Tag: JU
+- Name: Kazakhstan
+  Tag: KZ
+  ISO: KZ
+- Name: Kenya
+  Tag: KE
+  ISO: KE
+- Name: Kermadec Islands
+  Tag: NZ
+- Name: Kingman Reef
+  Tag: KQ
+- Name: Kiribati
+  Tag: KR
+  ISO: KI
+- Name: Korea (Dem. Peoples Rep. of)
+  Tag: KN
+  ISO: KP
+- Name: Korea (Republic of)
+  Tag: KS
+  ISO: KR
+- Name: Kosovo
+  Tag: KV
+  ISO: XK
+- Name: Kuwait
+  Tag: KU
+  ISO: KW
+- Name: Kyrgyzstan
+  Tag: KG
+  ISO: KG
+- Name: Lakshadweep Islands
+  Tag: IN
+- Name: Laos
+  Tag: LA
+  ISO: LA
+- Name: Latvia
+  Tag: LG
+  ISO: LV
+- Name: Lebanon
+  Tag: LE
+  ISO: LB
+- Name: Lesotho
+  Tag: LT
+  ISO: LS
+- Name: Liberia
+  Tag: LI
+  ISO: LR
+- Name: Libya
+  Tag: LY
+  ISO: LY
+- Name: Liechtenstein
+  Tag: LS
+  ISO: LI
+- Name: Lithuania
+  Tag: LH
+  ISO: LT
+- Name: Lord Howe Island
+  Tag: AS
+- Name: Luxembourg
+  Tag: LU
+  ISO: LU
+- Name: Macau
+  Tag: MC
+  ISO: MO
+- Name: Macedonia
+  Tag: MK
+  ISO: MK
+- Name: Macquarie Island
+  Tag: AS
+- Name: Madagascar
+  Tag: MA
+  ISO: MG
+- Name: Madeira Islands
+  Tag: PO
+- Name: Malawi
+  Tag: MI
+  ISO: MW
+- Name: Malaysia
+  Tag: MY
+  ISO: MY
+- Name: Maldives
+  Tag: MV
+  ISO: MV
+- Name: Mali
+  Tag: ML
+  ISO: ML
+- Name: Mallorca
+  Tag: SP
+- Name: Malta
+  Tag: MT
+  ISO: MT
+- Name: Man, Isle of
+  Tag: IM
+  ISO: IM
+- Name: Marshall Islands
+  Tag: RM
+  ISO: MH
+- Name: Martinique
+  Tag: MB
+  ISO: MQ
+- Name: Mauritania
+  Tag: MR
+  ISO: MR
+- Name: Mauritius
+  Tag: MP
+  ISO: MU
+- Name: Mayotte
+  Tag: MF
+  ISO: YT
+- Name: Mexico
+  Tag: MX
+  ISO: MX
+- Name: Micronesia
+  Tag: FM
+  ISO: FM
+- Name: Midway Islands
+  Tag: MQ
+- Name: Moldova
+  Tag: MD
+  ISO: MD
+- Name: Monaco
+  Tag: MN
+  ISO: MC
+- Name: Mongolia
+  Tag: MG
+  ISO: MN
+- Name: Montenegro
+  Tag: MJ
+  ISO: ME
+- Name: Montserrat
+  Tag: MH
+  ISO: MS
+- Name: Morocco
+  Tag: MO
+  ISO: MA
+- Name: Mozambique
+  Tag: MZ
+  ISO: MZ
+- Name: Namibia
+  Tag: WA
+  ISO: NA
+- Name: Nauru
+  Tag: NR
+  ISO: NR
+- Name: Navassa Island
+  Tag: BQ
+- Name: Nepal
+  Tag: NP
+  ISO: NP
+- Name: Netherlands
+  Tag: NL
+  ISO: NL
+- Name: New Caledonia
+  Tag: NC
+  ISO: NC
+- Name: New Zealand
+  Tag: NZ
+  ISO: NZ
+- Name: Nicaragua
+  Tag: NU
+  ISO: NI
+- Name: Nicobar Islands
+  Tag: IN
+- Name: Niger
+  Tag: NG
+  ISO: NE
+- Name: Nigeria
+  Tag: NI
+  ISO: NG
+- Name: Niue
+  Tag: NE
+  ISO: NU
+- Name: Norfolk Island
+  Tag: NF
+  ISO: NF
+- Name: Northern Mariana Islands
+  Tag: CQ
+  ISO: MP
+- Name: Norway
+  Tag: 'NO'
+  ISO: 'NO'
+- Name: Okinawa
+  Tag: JA
+- Name: Oman
+  Tag: MU
+  ISO: OM
+- Name: Pakistan
+  Tag: PK
+  ISO: PK
+- Name: Palau
+  Tag: PS
+  ISO: PW
+- Name: Palmyra Atoll
+  Tag: LQ
+- Name: Panama
+  Tag: PM
+  ISO: PA
+- Name: Papua New Guinea
+  Tag: PP
+  ISO: PG
+- Name: Paracel Islands
+  Tag: PF
+- Name: Paraguay
+  Tag: PA
+  ISO: PY
+- Name: Peru
+  Tag: PE
+  ISO: PE
+- Name: Philippines
+  Tag: RP
+  ISO: PH
+- Name: Pitcairn Islands
+  Tag: PC
+  ISO: PN
+- Name: Poland
+  Tag: PL
+  ISO: PL
+- Name: Portugal
+  Tag: PO
+  ISO: PT
+- Name: Puerto Rico
+  Tag: RQ
+  ISO: PR
+- Name: Qatar
+  Tag: QA
+  ISO: QA
+- Name: Reunion
+  Tag: RE
+  ISO: RE
+- Name: Romania
+  Tag: RO
+  ISO: RO
+- Name: Russia
+  Tag: RS
+  ISO: RU
+- Name: Rwanda
+  Tag: RW
+  ISO: RW
+- Name: Ryukyu Islands
+  Tag: JA
+- Name: Saint Barthelemy
+  Tag: TB
+  ISO: BL
+- Name: Saint Helena
+  Tag: SH
+  ISO: SH
+- Name: Saint Kitts and Nevis
+  Tag: SC
+  ISO: KN
+- Name: Saint Lucia
+  Tag: ST
+  ISO: LC
+- Name: Saint Martin
+  Tag: RN
+  ISO: MF
+- Name: Saint Pierre and Miquelon
+  Tag: SB
+  ISO: PM
+- Name: Saint Vincent and the Grenadines
+  Tag: VC
+  ISO: VC
+- Name: Samoa
+  Tag: WS
+  ISO: WS
+- Name: San Marino
+  Tag: SM
+  ISO: SM
+- Name: Sao Tome and Principe
+  Tag: TP
+  ISO: ST
+- Name: Saudi Arabia
+  Tag: SA
+  ISO: SA
+- Name: Senegal
+  Tag: SG
+  ISO: SN
+- Name: Serbia and Montenegro
+  Tag: YI
+  ISO: RS
+- Name: Seychelles
+  Tag: SE
+  ISO: SC
+- Name: Sierra Leone
+  Tag: SL
+  ISO: SL
+- Name: Singapore
+  Tag: SN
+  ISO: SG
+- Name: Sint Maarten
+  Tag: NN
+  ISO: SX
+- Name: Slovakia
+  Tag: LO
+  ISO: SK
+- Name: Slovenia
+  Tag: SI
+  ISO: SI
+- Name: Solomon Islands
+  Tag: BP
+  ISO: SB
+- Name: Somalia
+  Tag: SO
+  ISO: SO
+- Name: South Africa
+  Tag: SF
+  ISO: ZA
+- Name: Spain
+  Tag: SP
+  ISO: ES
+- Name: Spratly Islands
+  Tag: PG
+- Name: Sri Lanka
+  Tag: CE
+  ISO: LK
+- Name: South Sudan
+  Tag: OD
+  ISO: SS
+- Name: Sudan
+  Tag: SU
+  ISO: SD
+- Name: Suriname
+  Tag: NS
+  ISO: SR
+- Name: Svalbard
+  Tag: SV
+  ISO: SJ
+- Name: Swaziland
+  Tag: WZ
+  ISO: SZ
+- Name: Sweden
+  Tag: SW
+  ISO: SE
+- Name: Switzerland
+  Tag: SZ
+  ISO: CH
+- Name: Syria
+  Tag: SY
+  ISO: SY
+- Name: Taiwan
+  Tag: TW
+  ISO: TW
+- Name: Tajikistan
+  Tag: TI
+  ISO: TJ
+- Name: Tanzania
+  Tag: TZ
+  ISO: TZ
+- Name: Tasmania
+  Tag: AS
+- Name: Thailand
+  Tag: TH
+  ISO: TH
+- Name: Timor-Leste
+  Tag: TT
+  ISO: TL
+- Name: Togo
+  Tag: TO
+  ISO: TG
+- Name: Tokelau
+  Tag: TL
+  ISO: TK
+- Name: Tonga
+  Tag: TN
+  ISO: TO
+- Name: Trinidad and Tobago
+  Tag: TD
+  ISO: TT
+- Name: Tristan da Cunha
+  Tag: SH
+- Name: Tromelin Island
+  Tag: TE
+- Name: Tunisia
+  Tag: TS
+  ISO: TN
+- Name: Turkey
+  Tag: TU
+  ISO: TR
+- Name: Turkmenistan
+  Tag: TX
+  ISO: TM
+- Name: Turks and Caicos Islands
+  Tag: TK
+  ISO: TC
+- Name: Tuvalu
+  Tag: TV
+  ISO: TV
+- Name: Uganda
+  Tag: UG
+  ISO: UG
+- Name: Ukraine
+  Tag: UP
+  ISO: UA
+- Name: United Arab Emirates
+  Tag: AE
+  ISO: AE
+- Name: United Kingdom
+  Tag: UK
+  ISO: GB
+- Name: United States
+  Tag: US
+  ISO: US
+- Name: Uruguay
+  Tag: UY
+  ISO: UY
+- Name: US Virgin Islands
+  Tag: VQ
+  ISO: VI
+- Name: Uzbekistan
+  Tag: UZ
+  ISO: UZ
+- Name: Vanuatu
+  Tag: NH
+  ISO: VU
+- Name: Vatican City (Holy See)
+  Tag: VT
+  ISO: VA
+- Name: Venezuela
+  Tag: VE
+  ISO: VE
+- Name: Vietnam
+  Tag: VM
+  ISO: VN
+- Name: Wake Island
+  Tag: WQ
+- Name: Wallis and Futuna
+  Tag: WF
+- Name: West Bank
+  Tag: WE
+  ISO: PS
+- Name: Western Sahara
+  Tag: WI
+  ISO: EH
+- Name: Wrangel Island
+  Tag: RS
+- Name: Yemen
+  Tag: YM
+  ISO: YE
+- Name: Zambia
+  Tag: ZA
+  ISO: ZM
+- Name: Zimbabwe
+  Tag: ZI
+  ISO: ZW
