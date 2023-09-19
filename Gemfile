@@ -18,6 +18,7 @@ gem "image_processing", "~> 1.2"
 gem "faker", "~> 2"
 gem "countries"
 gem "rss"
+gem "money"
 
 # Front-end
 gem "sprockets-rails", "~> 3.4"

@@ -19,7 +19,7 @@ module CountriesHelper
 
   def advisory_level_name(advisory)
     if advisory && advisory.level == 1
-      return "Normal Precaution"
+      return "No Advisory"
     elsif advisory && advisory.level == 2
       return "Increased Caution"
     elsif advisory && advisory.level == 3

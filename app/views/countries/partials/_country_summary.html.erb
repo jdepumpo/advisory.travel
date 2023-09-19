@@ -5,12 +5,23 @@
   <h1 class="card-title"><%= @country_info.emoji_flag %> <%= @country.name %></h1>
 
   <div class="card-body">
+    <div id="map"
+      class="h-64 w-full"
+      data-show-map="true"
+      data-country-min-lat="<%= @country_info.min_latitude %>"
+      data-country-min-long="<%= @country_info.min_longitude %>"
+      data-country-max-lat="<%= @country_info.max_latitude %>"
+      data-country-max-long="<%= @country_info.max_longitude %>">
+    </div>
     <dl>
-      <dt class="font-semibold">Capitol</dt>
-      <dd>Bamako</dd>
+      <dt class="font-semibold">Capital</dt>
+      <dd>-</dd>
 
       <dt class="font-semibold mt-2">Currency</dt>
-      <dd>$USD - United States Dollar</dd>
+      <dd>
+        <span class="font-semibold text-white bg-slate-700 px-1 rounded"><%= "#{@country_info.currency.symbol}" %></span>
+        <%= "#{@country_info.currency.name} (#{@country_info.currency.iso_code})" %>
+      </dd>
     </dl>
   </div>
 

@@ -2,21 +2,12 @@
 - Name: Afghanistan
   Tag: AF
   ISO: AF
-- Name: Aland Islands
-  Tag: FI
-  ISO: AX
 - Name: Albania
   Tag: AL
   ISO: AL
-- Name: Aleutian Islands
-  Tag: US
 - Name: Algeria
   Tag: AG
   ISO: DZ
-- Name: American Samoa
-  Tag: AS
-- Name: Andaman Islands
-  Tag: IN
 - Name: Andorra
   Tag: AN
   ISO: AD
@@ -26,16 +17,12 @@
 - Name: Anguilla
   Tag: AV
   ISO: AI
-- Name: Annobon
-  Tag: EK
 - Name: Antarctica
   Tag: AY
   ISO: AQ
 - Name: Antigua and Barbuda
   Tag: AC
   ISO: AG
-- Name: Antipodes Islands
-  Tag: NZ
 - Name: Argentina
   Tag: AR
   ISO: AR
@@ -45,12 +32,6 @@
 - Name: Aruba
   Tag: AA
   ISO: AW
-- Name: Ascension Island
-  Tag: SH
-- Name: Ashmore and Cartier Islands
-  Tag: AS
-- Name: Auckland Islands
-  Tag: NZ
 - Name: Australia
   Tag: AS
   ISO: AU
@@ -60,25 +41,18 @@
 - Name: Azerbaijan
   Tag: AJ
   ISO: AZ
-- Name: Azores
-  Tag: PO
 - Name: Bahamas, The
   Tag: BF
   ISO: BS
 - Name: Bahrain
   Tag: BA
   ISO: BH
-- Name: Baker Island
-  Tag: FQ
-- Name: Balearic Islands
-  Tag: SP
 - Name: Bangladesh
   Tag: BG
   ISO: BD
 - Name: Barbados
   Tag: BB
-- Name: Bassas da India
-  Tag: BS
+  ISO: BB
 - Name: Belarus
   Tag: BO
   ISO: BY
@@ -106,8 +80,6 @@
 - Name: Botswana
   Tag: BC
   ISO: BW
-- Name: Bounty Islands
-  Tag: NZ
 - Name: Bouvet Island
   Tag: BV
   ISO: BV
@@ -144,9 +116,6 @@
 - Name: Canada
   Tag: CA
   ISO: CA
-- Name: Canary Islands
-  Tag: SP
-  ISO: IC
 - Name: Cape Verde
   Tag: CV
   ISO: CV
@@ -159,10 +128,6 @@
 - Name: Chad
   Tag: CD
   ISO: TD
-- Name: Chagos Archipelago
-  Tag: IO
-- Name: Chatham Islands
-  Tag: NZ
 - Name: Chile
   Tag: CI
   ISO: CL
@@ -172,8 +137,6 @@
 - Name: Christmas Island
   Tag: KT
   ISO: CX
-- Name: Clipperton Island
-  Tag: IP
 - Name: Cocos (Keeling) Islands
   Tag: CK
   ISO: CC
@@ -192,18 +155,12 @@
 - Name: Cook Islands
   Tag: CW
   ISO: CK
-- Name: Coral Sea Islands
-  Tag: CR
-- Name: Corsica
-  Tag: FR
 - Name: Costa Rica
   Tag: CS
   ISO: CR
 - Name: Cote D’Ivoire
   Tag: IV
   ISO: CI
-- Name: Crete
-  Tag: GR
 - Name: Croatia
   Tag: HR
   ISO: HR
@@ -255,8 +212,6 @@
 - Name: Ethiopia
   Tag: ET
   ISO: ET
-- Name: Europa
-  Tag: EU
 - Name: Falkland Islands (Islas Malvinas)
   Tag: FK
   ISO: FK
@@ -273,7 +228,7 @@
   Tag: FR
   ISO: FR
 - Name: French Guiana
-  Tag: FG
+  Tag: A2
   ISO: GF
 - Name: French Polynesia
   Tag: FP
@@ -302,10 +257,6 @@
 - Name: Gibraltar
   Tag: GI
   ISO: GI
-- Name: Glorioso Islands
-  Tag: GO
-- Name: Gough Island
-  Tag: SH
 - Name: Greece
   Tag: GR
   ISO: GR
@@ -348,8 +299,6 @@
 - Name: Hong Kong
   Tag: HK
   ISO: HK
-- Name: Howland Island
-  Tag: HQ
 - Name: Hungary
   Tag: HU
   ISO: HU
@@ -380,33 +329,21 @@
 - Name: Jamaica
   Tag: JM
   ISO: JM
-- Name: Jan Mayen
-  Tag: JN
 - Name: Japan
   Tag: JA
   ISO: JP
-- Name: Jarvis Island
-  Tag: DQ
 - Name: Jersey
   Tag: JE
   ISO: JE
-- Name: Johnston Atoll
-  Tag: JQ
 - Name: Jordan
   Tag: JO
   ISO: JO
-- Name: Juan de Nova Island
-  Tag: JU
 - Name: Kazakhstan
   Tag: KZ
   ISO: KZ
 - Name: Kenya
   Tag: KE
   ISO: KE
-- Name: Kermadec Islands
-  Tag: NZ
-- Name: Kingman Reef
-  Tag: KQ
 - Name: Kiribati
   Tag: KR
   ISO: KI
@@ -425,8 +362,6 @@
 - Name: Kyrgyzstan
   Tag: KG
   ISO: KG
-- Name: Lakshadweep Islands
-  Tag: IN
 - Name: Laos
   Tag: LA
   ISO: LA
@@ -451,8 +386,6 @@
 - Name: Lithuania
   Tag: LH
   ISO: LT
-- Name: Lord Howe Island
-  Tag: AS
 - Name: Luxembourg
   Tag: LU
   ISO: LU
@@ -462,13 +395,9 @@
 - Name: Macedonia
   Tag: MK
   ISO: MK
-- Name: Macquarie Island
-  Tag: AS
 - Name: Madagascar
   Tag: MA
   ISO: MG
-- Name: Madeira Islands
-  Tag: PO
 - Name: Malawi
   Tag: MI
   ISO: MW
@@ -481,8 +410,6 @@
 - Name: Mali
   Tag: ML
   ISO: ML
-- Name: Mallorca
-  Tag: SP
 - Name: Malta
   Tag: MT
   ISO: MT
@@ -510,8 +437,6 @@
 - Name: Micronesia
   Tag: FM
   ISO: FM
-- Name: Midway Islands
-  Tag: MQ
 - Name: Moldova
   Tag: MD
   ISO: MD
@@ -539,8 +464,6 @@
 - Name: Nauru
   Tag: NR
   ISO: NR
-- Name: Navassa Island
-  Tag: BQ
 - Name: Nepal
   Tag: NP
   ISO: NP
@@ -556,8 +479,6 @@
 - Name: Nicaragua
   Tag: NU
   ISO: NI
-- Name: Nicobar Islands
-  Tag: IN
 - Name: Niger
   Tag: NG
   ISO: NE
@@ -576,8 +497,6 @@
 - Name: Norway
   Tag: 'NO'
   ISO: 'NO'
-- Name: Okinawa
-  Tag: JA
 - Name: Oman
   Tag: MU
   ISO: OM
@@ -587,16 +506,12 @@
 - Name: Palau
   Tag: PS
   ISO: PW
-- Name: Palmyra Atoll
-  Tag: LQ
 - Name: Panama
   Tag: PM
   ISO: PA
 - Name: Papua New Guinea
   Tag: PP
   ISO: PG
-- Name: Paracel Islands
-  Tag: PF
 - Name: Paraguay
   Tag: PA
   ISO: PY
@@ -633,8 +548,6 @@
 - Name: Rwanda
   Tag: RW
   ISO: RW
-- Name: Ryukyu Islands
-  Tag: JA
 - Name: Saint Barthelemy
   Tag: TB
   ISO: BL
@@ -671,8 +584,8 @@
 - Name: Senegal
   Tag: SG
   ISO: SN
-- Name: Serbia and Montenegro
-  Tag: YI
+- Name: Serbia
+  Tag: RI
   ISO: RS
 - Name: Seychelles
   Tag: SE
@@ -704,8 +617,6 @@
 - Name: Spain
   Tag: SP
   ISO: ES
-- Name: Spratly Islands
-  Tag: PG
 - Name: Sri Lanka
   Tag: CE
   ISO: LK
@@ -728,7 +639,7 @@
   Tag: SW
   ISO: SE
 - Name: Switzerland
-  Tag: SZ
+  Tag: CH
   ISO: CH
 - Name: Syria
   Tag: SY
@@ -742,8 +653,6 @@
 - Name: Tanzania
   Tag: TZ
   ISO: TZ
-- Name: Tasmania
-  Tag: AS
 - Name: Thailand
   Tag: TH
   ISO: TH
@@ -762,10 +671,6 @@
 - Name: Trinidad and Tobago
   Tag: TD
   ISO: TT
-- Name: Tristan da Cunha
-  Tag: SH
-- Name: Tromelin Island
-  Tag: TE
 - Name: Tunisia
   Tag: TS
   ISO: TN
@@ -817,18 +722,12 @@
 - Name: Vietnam
   Tag: VM
   ISO: VN
-- Name: Wake Island
-  Tag: WQ
-- Name: Wallis and Futuna
-  Tag: WF
 - Name: West Bank
   Tag: WE
   ISO: PS
 - Name: Western Sahara
   Tag: WI
   ISO: EH
-- Name: Wrangel Island
-  Tag: RS
 - Name: Yemen
   Tag: YM
   ISO: YE
