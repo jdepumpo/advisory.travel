@@ -5,10 +5,10 @@
       <span class="p-2 rounded font-semibold <%= advisory_level_color(advisory) %>"><%= advisory_level_name(advisory) %></span>
     </div>
     <div class="card-subtitle">
-      <p>Issued Yesterday</p>
+      <p>Issued <%= time_ago(advisory.pub_date) %></p>
       <hr />
     </div>
-    <div class="card-body">
+    <div class="prose list-dot list-inside">
       <%== advisory.body %>
     </div>
   <% end %>

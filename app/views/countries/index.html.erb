@@ -22,19 +22,19 @@
       </thead>
       <tbody>
         <% @countries.each do |country| %>
-          <tr>
+          <tr style="cursor: pointer; cursor: hand;" onclick="window.location='<%= country_path(country.alpha2) %>';">
             <td class="w-2">
-              <%= link_to get_emoji_flag(country.alpha2), country_path(country.alpha2) %>
+              <%= get_emoji_flag(country.alpha2) %>
             </td>
             <td>
-              <strong><%= link_to country.name, country_path(country.alpha2) %></strong>
+              <span class="text-indigo-600 outline-none font-bold"><%= country.name %></span>
             </td>
             <td>
               <%= country.region %>
             </td>
             <td class="text-center">
               <% country_advisory = country.advisories.first || nil %>
-              <span class="px-4 py-2 rounded <%= advisory_level_color(country_advisory) %>">
+              <span class="px-4 py-2 rounded inline-block <%= advisory_level_color(country_advisory) %>">
                 <%== advisory_level_name(country_advisory) %>
               </span>
             </td>
