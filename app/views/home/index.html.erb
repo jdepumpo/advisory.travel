@@ -1,11 +1,22 @@
-<div class="text-center my-24">
+<div class="flex flex-col text-center my-24 items-center">
   <h1 class="tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-    <span>Travisor</span><br>
-    <span class="text-indigo-600">Your travel companion!</span>
+    <span>Travel advisories</span><br>
+    <span class="text-amber-600">global, updated daily.</span>
   </h1>
 
-  <p class="mt-5 mb-10 text-gray-500 sm:text-lg md:text-xl">Description.</p>
+  <p class="mt-5 mb-10 m-auto max-w-3xl text-gray-500 sm:text-lg md:text-xl">advisory.travel collects travel advisories for nearly every country in the world. We continuosly update our advisories so that you always have the latest information available.</p>
 
-  <a href="#" class="btn">Get started</a>
-  <a href="#" class="btn btn-outline ml-4">Explore app</a>
+  <section class="flex flex-row gap-6 justify-items-between">
+    <%= link_to "List All Countries", countries_path, class: "btn" %>
+    <section>
+      <label class="hidden" for="country_selector">Select a Country</label>
+      <select class="btn btn-outline" id="country_selector" onchange="const elem = document.getElementById('country_selector'); window.location = (elem.value);">
+        <option>Select a Country</option>
+        <% @countries.each do |country| %>
+          <option id="country" value="<%= country_path(country.alpha2) %>"><%= country.name %> <%= get_emoji_flag(country.alpha2) %></option>
+        <% end %>
+      </select>
+    </section>
+  </section>
+
 </div>

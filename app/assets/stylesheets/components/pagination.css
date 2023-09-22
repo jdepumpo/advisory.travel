@@ -3,5 +3,5 @@
 }
 
 .pagination .page.active {
-  @apply bg-indigo-600 text-white rounded;
+  @apply bg-amber-600 text-white rounded;
 }

@@ -15,13 +15,16 @@
     </div>
     <dl>
       <dt class="font-semibold">Capital</dt>
-      <dd>-</dd>
-
+      <dd><%= @country.capital %></dd>
       <dt class="font-semibold mt-2">Currency</dt>
       <dd>
         <span class="font-semibold text-white bg-slate-700 px-1 rounded"><%= "#{@country_info.currency.symbol}" %></span>
         <%= "#{@country_info.currency.name} (#{@country_info.currency.iso_code})" %>
       </dd>
+      <dt class="font-semibold">Drives on the</dt>
+      <dd><%= @country.drives_on.capitalize %></dd>
+      <dt class="font-semibold">Population</dt>
+      <dd>~ <%= number_to_human(@country.population) %></dd>
     </dl>
   </div>
 

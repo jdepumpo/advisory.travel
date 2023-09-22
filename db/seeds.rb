@@ -1,28 +1,46 @@
 require 'rss'
 require 'open-uri'
 require 'yaml'
+require 'json'
 require 'countries'
 
-if User.none?
-  10.times do
-    User.create!(
-      name: Faker::Name.name,
-      email: Faker::Internet.email,
-      password: "1234asdf"
-    )
-  end
+## Get countries
+Advisory.delete_all
+Country.delete_all
+
+def fetch_country_data(alpha2)
+  info_hash = { }
+  url = "https://restcountries.com/v3.1/alpha/#{alpha2}"
+  country_json = URI.open(url).read
+  country_info = JSON.parse(country_json)
+  capital = country_info[0]["capital"][0] || "-"
+  drives_on = country_info[0]["car"]["side"] || "-"
+  population = country_info[0]["population"] || 0
+  landlocked = country_info[0]["landlocked"] || "-"
+  info_hash = { capital: capital, drives_on: drives_on, population: population, landlocked: landlocked }
 end
 
-if Country.none?
-  country_array = []
-  ISO3166::Country.pluck(:alpha2, :region).each do |info|
+country_array = []
+ISO3166::Country.pluck(:alpha2, :region, :subregion).each do |info|
+  if info[0].present? && info[1].present? && info[2].present? && info[0] != "MO"
     common_name = ISO3166::Country[info[0]].common_name
+    puts "Trying to fetch addl data about #{common_name} (#{info[0]})"
+    hash = fetch_country_data(info[0])
     Country.create!(
-      alpha2: info[0],
-      name: common_name,
-      region: info[1]
+    alpha2: info[0],
+    name: common_name,
+    region: info[1],
+    subregion: info[2],
+    capital: hash[:capital],
+    drives_on: hash[:drives_on],
+    population: hash[:population],
+    landlocked: hash[:landlocked]
     )
-    puts common_name
+    puts "Created: #{common_name}"
+    puts "------------------------"
+  else
+    puts "skipping..."
+    next
   end
 end
 
@@ -31,8 +49,6 @@ if Issuer.none?
     name: "US"
   )
 end
-
-Advisory.delete_all
 
 def get_US_advisories
   state_to_iso_yml = YAML.load_file("#{Rails.root.to_s}/static_data/state_to_iso.yml")

@@ -1,8 +1,4 @@
 module CountriesHelper
-  def get_emoji_flag(alpha2)
-    return ISO3166::Country[alpha2].emoji_flag
-  end
-
   def advisory_level_color(advisory)
     if advisory && advisory.level == 1
       return "bg-green-400"
@@ -13,7 +9,7 @@ module CountriesHelper
     elsif advisory && advisory.level == 4
       return "bg-red-400"
     else
-      return ""
+      return "bg-gray-200"
     end
   end
 
@@ -27,7 +23,7 @@ module CountriesHelper
     elsif advisory && advisory.level == 4
       return "Do Not Travel"
     else
-      return ""
+      return "—"
     end
   end
 

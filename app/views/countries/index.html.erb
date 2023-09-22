@@ -24,10 +24,10 @@
         <% @countries.each do |country| %>
           <tr style="cursor: pointer; cursor: hand;" onclick="window.location='<%= country_path(country.alpha2) %>';">
             <td class="w-2">
-              <%= get_emoji_flag(country.alpha2) %>
+              <%= link_to get_emoji_flag(country.alpha2), country_path(country.alpha2) %>
             </td>
             <td>
-              <span class="text-indigo-600 outline-none font-bold"><%= country.name %></span>
+              <%= link_to country.name, country_path(country.alpha2), class: "text-amber-900 outline-none font-bold" %>
             </td>
             <td>
               <%= country.region %>

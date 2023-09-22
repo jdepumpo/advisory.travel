@@ -21,7 +21,7 @@ const App = new RalixApp({
   components: [
     RemoteModal,
     Tooltip,
-    Protomap
+    Protomap,
   ]
 })
 

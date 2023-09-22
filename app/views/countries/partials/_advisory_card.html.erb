@@ -1,15 +1,23 @@
 <section class="card my-4 md:col-span-2">
-  <% @advisories.each do |advisory| %>
-    <div class="card-title">
-      <h2>Travel Advisory</h2>
-      <span class="p-2 rounded font-semibold <%= advisory_level_color(advisory) %>"><%= advisory_level_name(advisory) %></span>
-    </div>
-    <div class="card-subtitle">
-      <p>Issued <%= time_ago(advisory.pub_date) %></p>
-      <hr />
-    </div>
-    <div class="prose list-dot list-inside">
-      <%== advisory.body %>
-    </div>
+  <% if @advisories.present? %>
+    <% @advisories.each do |advisory| %>
+      <div class="card-title">
+        <h2>Travel Advisory</h2>
+        <span class="p-2 rounded font-semibold <%= advisory_level_color(advisory) %>"><%= advisory_level_name(advisory) %></span>
+      </div>
+      <div class="card-subtitle">
+        <p>Issued <%= time_ago(advisory.pub_date) %></p>
+        <hr />
+      </div>
+      <section class="prose list-dot list-inside">
+        <%== advisory.body %>
+      </section>
+    <% end %>
+  <% else %>
+    <section class="card-body">
+    <p class="px-4 py-2 rounded bg-gray-200">
+      No advisories are currently available. This could be for a variety of reasons, including how the US Department of State categorises and releases travel advisories. We are working to expand the sources of our travel advisories and country coverage.
+    </p>
+    </section>
   <% end %>
 </section>
