@@ -1,7 +1,5 @@
 source "https://rubygems.org"
 
-ruby File.read(".ruby-version").strip
-
 gem "rails", "~> 7.0"
 gem "pg", "~> 1.4"
 gem "puma", "~> 6.3"
@@ -32,3 +30,7 @@ group :development do
   gem "debug"
   gem "dotenv-rails"
 end
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
+
+gem "redis", "~> 5.0"
