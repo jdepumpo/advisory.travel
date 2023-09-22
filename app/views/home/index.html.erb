@@ -6,11 +6,11 @@
 
   <p class="mt-5 mb-10 m-auto max-w-3xl text-gray-500 sm:text-lg md:text-xl">advisory.travel collects travel advisories for nearly every country in the world. We continuosly update our advisories so that you always have the latest information available.</p>
 
-  <section class="flex flex-row gap-6 justify-items-between">
+  <section class="flex flex-col gap-3 md:flex-row md:gap-6 justify-items-between">
     <%= link_to "List All Countries", countries_path, class: "btn" %>
     <section>
       <label class="hidden" for="country_selector">Select a Country</label>
-      <select class="btn btn-outline" id="country_selector" onchange="const elem = document.getElementById('country_selector'); window.location = (elem.value);">
+      <select class="btn btn-outline max-w-xs md:max-w-sm" id="country_selector" onchange="const elem = document.getElementById('country_selector'); window.location = (elem.value);">
         <option>Select a Country</option>
         <% @countries.each do |country| %>
           <option id="country" value="<%= country_path(country.alpha2) %>"><%= country.name %> <%= get_emoji_flag(country.alpha2) %></option>
