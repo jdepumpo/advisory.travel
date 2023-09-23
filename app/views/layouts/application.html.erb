@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= page_title %></title>
+    <title><%= meta_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -27,7 +27,7 @@
     <meta name="twitter:title" content="<%= meta_title %>">
     <meta name="twitter:description" content="<%= meta_description %>">
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
-    <meta name="twitter:image:src" content="<%= meta_image %>">
+    <meta name="twitter:image" content="<%= meta_image %>">
   </head>
 
   <body class="<%= body_class %>">
