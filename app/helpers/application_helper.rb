@@ -3,7 +3,7 @@ module ApplicationHelper
   include Heroicon::Engine.helpers
 
   def page_title
-    "advisory.travel | #{controller_name.humanize}"
+    "advisory.travel | #{controller_name.humanize} | Travel advisories for countries around the world"
   end
 
   def body_class

@@ -1,0 +1,5 @@
+meta_name: "advisory.travel"
+meta_title: "advisory.travel | Travel advisories for countries around the world"
+meta_description: "Travel advisories for countries around the world"
+meta_image: "meta.png" # should exist in `app/assets/images/`
+twitter_account: "@jdepumpo"   # required for Twitter Cards
