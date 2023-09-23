@@ -1,5 +1,6 @@
 table {
   @apply w-full text-sm text-left;
+  border-collapse: collapse;
 }
 
 table thead {
@@ -24,4 +25,18 @@ table img {
 
 .table-responsive {
   @apply overflow-x-auto relative;
+}
+
+/* See Lea Verou's explanation background-attachment:
+ * http://lea.verou.me/2012/04/background-attachment-local/
+ */
+ .widetable {
+  overflow-x: auto;
+  position: relative;
+  background-image: linear-gradient(left, #ffffff, rgba(255, 255, 255, 0)), linear-gradient(right, #ffffff, rgba(255, 255, 255, 0)), linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
+  background-position: 0 0, 100% 0, 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+  background-attachment: local, local, scroll, scroll;
 }

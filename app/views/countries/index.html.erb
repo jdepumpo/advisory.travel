@@ -10,14 +10,14 @@
 <% end %>
 
 <%= turbo_frame_tag "search", target: "_top" do %>
-  <div class="table-responsive mt-8">
+  <div class="mt-8 widetable">
     <table>
       <thead>
         <tr>
-          <th class="w-2"><!--Country Flag--></th>
-          <th><%= sort_link(@q, :name) %></th>
-          <th><%= sort_link(@q, :region) %></th>
-          <th class="text-center">Advisory</th>
+          <th scope="col" class="w-2"><!--Country Flag--></th>
+          <th scope="col"><%= sort_link(@q, :name) %></th>
+          <th scope="col"><%= sort_link(@q, :region) %></th>
+          <th scope="col" class="text-center">Advisory</th>
         </tr>
       </thead>
       <tbody>
