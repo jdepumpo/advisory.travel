@@ -8,7 +8,7 @@ User.delete_all
 User.create!(
   name: "Admin",
   email: "admin@admin.com",
-  password: ENV{'ADMIN_PASSWD'},
+  password: ENV['ADMIN_PASSWD'],
   admin: true,
 )
 
