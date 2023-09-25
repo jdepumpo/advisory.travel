@@ -1,3 +1,4 @@
+<% content_for :meta_title, "Countries | #{DEFAULT_META["meta_name"]} | #{DEFAULT_META["meta_description"]}" %>
 <h1>Countries</h1>
 
 <%= search_form_for @q, data: { turbo_frame: "search" } do |f| %>
@@ -5,7 +6,7 @@
     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
       <%= heroicon "magnifying-glass" %>
     </div>
-    <%= f.text_field :name_or_region_start, class: "search-input p-3 pl-10 text-sm", onkeyup: "search()", placeholder: "Country Name or Region ..." %>
+    <%= f.text_field :name_or_region_cont, class: "search-input p-3 pl-10 text-sm", onkeyup: "search()", placeholder: "Country Name or Region ..." %>
   </div>
 <% end %>
 
@@ -17,7 +18,7 @@
           <th scope="col" class="w-2"><!--Country Flag--></th>
           <th scope="col"><%= sort_link(@q, :name) %></th>
           <th scope="col"><%= sort_link(@q, :region) %></th>
-          <th scope="col" class="text-center">Advisory</th>
+          <th scope="col" class="text-center"><%= sort_link(@q, :advisories_level) %></th>
         </tr>
       </thead>
       <tbody>

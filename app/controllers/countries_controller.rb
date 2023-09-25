@@ -5,6 +5,7 @@ class CountriesController < ApplicationController
 
   def index
     @q = Country.ransack(params[:q])
+    @advisory = @q.result.includes(:advisories)
     @pagy, @countries = pagy(@q.result.order(name: :asc), items: 30)
     @country_info = ISO3166::Country[@country]
   end

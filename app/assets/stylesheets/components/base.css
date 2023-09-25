@@ -19,7 +19,7 @@ p {
 }
 
 a {
-  @apply text-amber-600 outline-none;
+  @apply text-amber-700 outline-none;
 }
 
 img {

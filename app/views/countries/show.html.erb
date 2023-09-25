@@ -1,4 +1,4 @@
-<% content_for :meta_title, "#{@country.name} Travel Advisories | advisory.travel" %>
+<% content_for :meta_title, "#{@country.name} Travel Advisories | #{DEFAULT_META["meta_name"]} | #{DEFAULT_META["meta_description"]}" %>
 
 <%= link_to "World", countries_path %> &gt; <%= link_to @country.region, countries_path("q[region_start]": @country.region) %> &gt; <%= link_to @country_info.subregion, countries_path("q[subregion_start]": @country.subregion) %> &gt; <%= @country.name %>
 
