@@ -9,8 +9,3 @@
   - mailers
   - active_storage_analysis
   - active_storage_purge
-:scheduler:
-  :schedule:
-    get_US_advisories_job:
-      cron: '0 */12 * * *'   # Runs every 12 hours
-      class: GetUsAdvisoriesJob
