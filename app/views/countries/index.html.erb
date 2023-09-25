@@ -34,7 +34,7 @@
               <%= country.region %>
             </td>
             <td class="text-center">
-              <% country_advisory = country.advisories.first || nil %>
+              <% country_advisory = country.advisories.order(created_at: :desc).first || nil %>
               <span class="px-4 py-2 rounded inline-block <%= advisory_level_color(country_advisory) %>">
                 <%== advisory_level_name(country_advisory) %>
               </span>

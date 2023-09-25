@@ -17,6 +17,9 @@ gem "faker", "~> 2"
 gem "countries"
 gem "rss"
 gem "money"
+gem "sidekiq", "< 7"
+gem "sidekiq-failures", "~> 1.0"
+gem "sidekiq-scheduler"
 
 # Front-end
 gem "sprockets-rails", "~> 3.4"

@@ -12,11 +12,10 @@
       <label class="hidden" for="country_selector">Select a Country</label>
       <select class="btn btn-outline max-w-xs md:max-w-sm" id="country_selector" onchange="const elem = document.getElementById('country_selector'); window.location = (elem.value);">
         <option>Select a Country</option>
-        <% @countries.each do |country| %>
+        <% @countries.order(name: :asc).each do |country| %>
           <option id="country" value="<%= country_path(country.alpha2) %>"><%= country.name %> <%= get_emoji_flag(country.alpha2) %></option>
         <% end %>
       </select>
     </section>
   </section>
-
 </div>

@@ -13,5 +13,7 @@ module RailsRalixTailwind
 
     # This tells Rails to serve error pages from the app itself, rather than using static error pages in public/
     config.exceptions_app = self.routes
+
+    config.active_job.queue_adapter = :sidekiq
   end
 end
