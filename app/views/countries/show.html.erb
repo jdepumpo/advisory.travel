@@ -4,5 +4,16 @@
 
 <div class="grid grid-flow-row md:grid-flow-col md:grid-cols-3 gap-2 md:gap-4">
   <%= render "/countries/partials/country_summary" %>
-  <%= render "/countries/partials/advisory_card" %>
+  <div class="grid grid-flow-row col-span-2">
+    <section class="card my-4">
+      <h2>Travel Advisories</h2>
+      <% if @advisories.present? %>
+        <div class="grid divide-y divide-neutral-200 mt-8">
+          <%= render partial: "countries/partials/advisories/advisory", collection: @advisories %>
+        </div>
+      <% else %>
+        <%= render "countries/partials/advisories/no_advisory" %>
+      <% end %>
+    </section>
+  </div>
 </div>
