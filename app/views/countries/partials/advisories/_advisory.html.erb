@@ -2,7 +2,7 @@
   <details class="group">
     <summary class="font-medium cursor-pointer list-none">
       <section class="grid grid-cols-2 sm:grid-cols-3 sm:grid-rows-auto gap-2 justify-between justify-items-between">
-        <span class="col-span-2 grow sm:col-span-1 p-2 rounded font-semibold text-center <%= advisory_level_color(advisory) %>"><%= advisory_level_name(advisory) %></span>
+        <span class="col-span-2 sm:col-span-1 p-2 rounded font-semibold text-center <%= advisory_level_color(advisory) %>"><%= advisory_level_name(advisory) %></span>
         <p><%= heroicon "calendar" %> <%= time_ago(advisory.pub_date) %></p>
         <div>
           <p data-tippy-content="<%= issuer_info(advisory.issuer[:name])[:gov] %>">Issued by <%= issuer_info(advisory.issuer[:name])[:flag] %></p>

@@ -6,10 +6,17 @@
 
   <div class="card-body">
     <div id="map"
-      class="h-72 w-full"
+      class="h-[80vh] w-full"
       data-show-map="true"
       data-world-advisory-map="true"
       data-country-geo-data="<%= asset_path '/map_data/countries.ldgeojson' %>">
     </div>
   </div>
 </div>
+
+<% if params[:country] %>
+  <%= turbo_frame_tag "countries", src: country_path(params[:country]) do %>
+    <%= render partial: "/countries/partials/country_summary", collection: @country %>
+    <p>TURBO</p>
+  <% end %>
+<% end %>
