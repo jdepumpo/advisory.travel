@@ -1,10 +1,11 @@
-<div class="card my-4 col-span-2 md:col-span-1">
+<div class="card my-4">
   <p class="card-subtitle">
   </p>
 
-  <h1 class="card-title"><%= @country_info.emoji_flag %> <%= @country.name %></h1>
+  <h1 class="card-title"><%= country_info.emoji_flag %> <%= country.name %></h1>
 
   <div class="card-body">
+  <% unless current_page?(map_path) %>
     <div id="map"
       class="h-64 w-full"
       data-show-map="true"
@@ -13,6 +14,7 @@
       data-country-max-lat="<%= @country_info.max_latitude %>"
       data-country-max-long="<%= @country_info.max_longitude %>">
     </div>
+  <% end %>
     <dl>
       <dt class="font-semibold">Capital</dt>
       <dd><%= @country.capital %></dd>

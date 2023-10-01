@@ -93,10 +93,11 @@ export default class Protomap {
     });
 
     map.on('click', 'country-fills', (e) => {
-      new maplibregl.Popup()
-          .setLngLat(e.lngLat)
-          .setHTML(e.features[0].properties["level"])
-          .addTo(map);
+      const frame = document.getElementById('country_info');
+      frame.src=`/map?country=${e.features[0].properties["ISO_A2"]}`;
+      frame.reload();
+      const grid = document.getElementById('map_container');
+      grid.classList.replace("sidebar_closed", "sidebar_open")
     });
 
     // Change the cursor to a pointer when the mouse is over the states layer.

@@ -12,3 +12,23 @@
 trix-editor {
   @apply bg-white border-gray-500 focus:border-amber-600 focus:ring focus:ring-indigo-300 focus:ring-opacity-50;
 }
+
+#map_container {
+  display: grid ;
+  grid-auto-flow: row;
+  transition: grid-template 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  @media (min-width: 768px) {
+    grid-auto-flow: column;
+    gap: 0.5rem;
+  }
+}
+
+#map_container.sidebar_closed {
+  grid-template-columns: 1fr 0fr;
+}
+
+#map_container.sidebar_open {
+  grid-template-columns: 2fr 1fr;
+}
