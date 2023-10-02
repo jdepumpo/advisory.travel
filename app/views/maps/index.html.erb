@@ -32,22 +32,28 @@
 
   <%= turbo_frame_tag "country_info" do %>
     <% if params[:country] %>
-      <button onClick="
-      const grid = document.getElementById('map_container');
-      grid.classList.replace('sidebar_open', 'sidebar_closed');
-      const frame = document.getElementById('country_info');
-      frame.innerHTML = '';"
-      class="p-2 rounded-full bg-slate-300">Close</button>
+      <section class="card my-4">
       <div id="sidebar_container" class="closed">
-      <%= render partial: "/countries/partials/country_summary", locals: { country: @country, country_info: @country_info } %>
+        <div class="flex justify-end">
+          <button onClick="
+          const grid = document.getElementById('map_container');
+          grid.classList.replace('sidebar_open', 'sidebar_closed');
+          const frame = document.getElementById('country_info');
+          frame.innerHTML = '';"
+          class="p-2 rounded bg-slate-300"><%= heroicon "x-circle", options: { class: "text-slate-700 text-2xl block" } %></button>
+        </div>
+        <%= render partial: "/countries/partials/country_summary", locals: { country: @country, country_info: @country_info } %>
       </div>
       <% if @advisories.present? %>
+      <hr class="mt-8">
         <div class="grid divide-y divide-neutral-200 mt-8">
-          <%= render partial: "countries/partials/advisories/advisory", collection: @advisories %>
+          <%= render partial: "countries/partials/advisories/avg_advisory", locals: { advisory: @advisories } %>
+          <a class="p-3 rounded no-underline bg-amber-800 text-center font-bold text-white" target="_top" href="<%= country_path(@country.alpha2) %>">See All Advisories</a>
         </div>
       <% else %>
         <%= render "countries/partials/advisories/no_advisory" %>
       <% end %>
+      </section>
     <% end %>
   <% end %>
 </div>

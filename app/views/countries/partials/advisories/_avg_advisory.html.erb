@@ -1,0 +1,5 @@
+<div class="rounded p-4 mb-4 <%= advisory_level(advisory.average(:level).to_i)[:color] %>">
+  <span class="font-semibold text-center"><%= advisory_level(advisory.average(:level).to_i)[:name] %></span>
+  <p>There are currently <%= advisory.count %> active travel advisories for <%= @country.name %>.</p>
+  <p>The most recent advisory was issued <%= time_ago(advisory.first.pub_date) %> by <span data-tippy-content="<%= issuer_info(advisory.first.issuer[:name])[:gov] %>"><%= issuer_info(advisory.first.issuer[:name])[:flag] %></span>, which recommended <span class="font-medium"><%= advisory_level(advisory.first.level)[:name] %></span>.</p>
+</div>

@@ -30,5 +30,8 @@ trix-editor {
 }
 
 #map_container.sidebar_open {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 0.1fr 1fr;
+  @media (min-width: 768px) {
+    grid-template-columns: 2fr 1fr;
+  }
 }
