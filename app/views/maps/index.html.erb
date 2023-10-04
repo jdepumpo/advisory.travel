@@ -8,7 +8,7 @@
     </div>
 
     <div id="map"
-      class="h-[50vh] md:h-[80vh] w-full relative"
+      class="h-[50vh] md:h-[75vh] w-full relative"
       data-show-map="true"
       data-world-advisory-map="true">
       <div id="loading-background" class="absolute z-10 flex inset-0 bg-slate-600/50">
@@ -16,11 +16,7 @@
       </div>
     </div>
 
-    <div class="flex flex-wrap inline-block gap-2 md:flex-row md:gap-x-4 bg-slate-300 rounded-b p-2 text-sm text-slate-700 justify-center items-center">
-      <div class="flex flex-col bg-slate-200 rounded p-2">
-        <span class="font-bold">Legend</span>
-        <span>Active Travel Advisory Average</span>
-      </div>
+    <div class="flex flex-wrap gap-2 md:flex-row md:gap-x-4 bg-slate-300 rounded-b p-2 text-sm text-slate-700 justify-center items-center">
       <span class="bg-[#228b22]/50 p-2 rounded font-semibold">No Advisory</span>
       <span class="bg-[#ffd800]/50 p-2 rounded font-semibold">Exercise Caution</span>
       <span class="bg-[#ff8c00]/50 p-2 rounded font-semibold">Reconsider Travel</span>
@@ -40,14 +36,18 @@
           frame.innerHTML = '';"
           class="p-2 rounded bg-slate-300"><%= heroicon "x-circle", options: { class: "text-slate-700 text-2xl block" } %></button>
         </div>
-        <%= render partial: "/countries/partials/country_summary", locals: { country: @country, country_info: @country_info } %>
       </div>
-      <% if @advisories.present? %>
-      <hr class="mt-8">
-        <div class="grid divide-y divide-neutral-200 mt-8">
-          <%= render partial: "countries/partials/advisories/avg_advisory", locals: { advisory: @advisories } %>
-          <a class="p-3 rounded no-underline bg-amber-800 text-center font-bold text-white" target="_top" href="<%= country_path(@country.alpha2) %>">See All Advisories</a>
-        </div>
+      <% if @country %>
+        <%= render partial: "/countries/partials/country_summary", locals: { country: @country, country_info: @country_info } %>
+        <% if @advisories.present? %>
+        <hr class="mt-8">
+          <div class="grid divide-y divide-neutral-200 mt-8">
+            <%= render partial: "countries/partials/advisories/avg_advisory", locals: { advisory: @advisories } %>
+            <a class="p-3 rounded no-underline bg-amber-800 text-center font-bold text-white" target="_top" href="<%= country_path(@country.alpha2) %>">See All Advisories</a>
+          </div>
+        <% else %>
+          <%= render "countries/partials/advisories/no_advisory" %>
+        <% end %>
       <% else %>
         <%= render "countries/partials/advisories/no_advisory" %>
       <% end %>
