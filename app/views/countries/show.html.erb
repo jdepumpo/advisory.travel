@@ -3,11 +3,17 @@
 <%= link_to "World", countries_path %> &gt; <%= link_to @country.region, countries_path("q[region_start]": @country.region) %> &gt; <%= link_to @country_info.subregion, countries_path("q[subregion_start]": @country.subregion) %> &gt; <%= @country.name %>
 
 <div class="grid grid-flow-row md:grid-flow-col md:grid-cols-3 gap-2 md:gap-4">
-  <%= render "/countries/partials/country_summary" %>
+  <div class="card my-4 col-span-2 md:col-span-1">
+    <%= render partial: "/countries/partials/country_summary", locals: { country: @country, country_info: @country_info } %>
+  </div>
   <div class="grid grid-flow-row col-span-2">
     <section class="card my-4">
       <h2>Travel Advisories</h2>
       <% if @advisories.present? %>
+        <div>
+          <%= render partial: "countries/partials/advisories/avg_advisory", locals: { advisory: @advisories } %>
+        </div>
+        <hr />
         <div class="grid divide-y divide-neutral-200 mt-8">
           <%= render partial: "countries/partials/advisories/advisory", collection: @advisories %>
         </div>

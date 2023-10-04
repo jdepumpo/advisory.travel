@@ -15,7 +15,7 @@ User.create!(
 
 ## Get countries
 Advisory.delete_all
-#Country.delete_all
+Country.delete_all
 
 def fetch_countries
   def fetch_country_data(alpha2)
@@ -64,7 +64,7 @@ def fetch_countries
   end
 end
 
-#fetch_countries
+fetch_countries
 
 Issuer.delete_all
 Issuer.create!(
@@ -124,6 +124,7 @@ def get_CA_advisories
     puts "_______FROM CA____________"
     country_data = element.search("td a")
     country = country_data.text.strip
+    country_url = country_data[0]["href"]
     puts "Country: #{country}"
 
     date_data = element.css("td[4]").children
@@ -134,7 +135,7 @@ def get_CA_advisories
     advisory = advisory_data.text.strip
     puts "Advisory: #{advisory}"
 
-    country_hash = { country: country, date: date, advisory_text: advisory }
+    country_hash = { country: country, date: date, advisory_text: advisory, source: "https://travel.gc.ca#{country_url}" }
     country_array.push(country_hash)
   end
 
@@ -179,3 +180,36 @@ def get_CA_advisories
 end
 
 get_CA_advisories
+
+
+## Add country adivsory level to map data
+
+# Read the GeoJSON file
+geojson_file = File.read(Rails.root.join('public', 'map_data', 'countries.geojson').to_s)
+geojson_data = JSON.parse(geojson_file)
+
+# Check if the GeoJSON contains a "features" array
+if geojson_data.key?('features') && geojson_data['features'].is_a?(Array)
+
+  # Iterate through each feature and add an "id" property
+  geojson_data['features'].each do |feature|
+    feature['properties'] ||= {}  # Ensure "properties" exists
+    json_country = feature['properties']['ISO_A2']
+    if country_lookup = Country.find_by(alpha2: json_country)
+      country_average_level = country_lookup.advisories.average(:level)
+      feature['properties']['level'] = country_average_level.to_i
+    else
+      feature['properties']['level'] = 0
+    end
+  end
+
+  # Convert the modified data back to JSON
+  modified_geojson = JSON.generate(geojson_data)
+
+  # Write the modified GeoJSON back to a file or do something else with it
+  File.write(Rails.root.join('public', 'map_data', 'countries.geojson'), modified_geojson)
+
+  puts 'ID column added successfully!'
+else
+  puts 'GeoJSON file does not contain a "features" array.'
+end

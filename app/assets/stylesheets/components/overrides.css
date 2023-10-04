@@ -12,3 +12,56 @@
 trix-editor {
   @apply bg-white border-gray-500 focus:border-amber-600 focus:ring focus:ring-indigo-300 focus:ring-opacity-50;
 }
+
+#map_container {
+  display: grid ;
+  transition: grid-template 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  gap: 0.5rem;
+}
+
+#map_container.sidebar_closed {
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr 0fr;
+  grid-template-areas:
+    "map"
+    "country_info";
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 0fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "map country_info";
+  }
+}
+
+#map_container.sidebar_open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "map"
+    "country_info";
+  @media (min-width: 768px) {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "map country_info";
+  }
+}
+
+#map_card {
+  grid-area: map;
+  overflow: hidden;
+}
+
+#country_info {
+  grid-area: country_info;
+  @media (max-width: 768px) {
+    z-index: 20;
+    margin: 0 .5rem;
+    transform: translateY(-22rem);
+  }
+  @media (max-width: 640px) {
+    transform: translateY(-25rem);
+  }
+}

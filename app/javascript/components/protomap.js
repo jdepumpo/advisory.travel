@@ -24,7 +24,7 @@ export default class Protomap {
               attribution: '<a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>'
           }
       },
-      zoom: 0,
+      zoom: 2,
       layers: layers("protomaps","grayscale")
     }
   });
@@ -54,7 +54,6 @@ export default class Protomap {
 
   // if world map,
   function worldAdvisoryMap() {
-    const countryGeoData = data.countryGeoData;
     map.addSource('countries', {
       'type': 'geojson',
       'data':
@@ -63,63 +62,64 @@ export default class Protomap {
     console.log("geojson loaded")
     // The feature-state dependent fill-opacity expression will render the hover effect
     // when a feature's hover state is set to true.
+    const spinnerEl = document.getElementById('spinner');
+    const backgroundEl = document.getElementById('loading-background');
+
     map.addLayer({
-        'id': 'state-fills',
+        'id': 'country-fills',
         'type': 'fill',
         'source': 'countries',
         'layout': {},
         'paint': {
-            'fill-color': '#627BC1',
-            'fill-opacity': [
-                'case',
-                ['boolean', ['feature-state', 'hover'], false],
+          'fill-color': [
+              'let',
+              'density',
+              ['get', 'level'],
+              [
+                'interpolate',
+                ['linear'],
+                ['var', 'density'],
+                0,
+                ['to-color', '#e2e2e2'],
                 1,
-                0.5
-            ]
+                ['to-color', '#228b22'],
+                2,
+                ['to-color', '#ffd800'],
+                3,
+                ['to-color', '#ff8c00'],
+                4,
+                ['to-color', '#ae0c00']
+              ]
+          ],
+          'fill-opacity': 0.5
         }
     });
 
-    map.addLayer({
-        'id': 'state-borders',
-        'type': 'line',
-        'source': 'countries',
-        'layout': {},
-        'paint': {
-            'line-color': '#627BC1',
-            'line-width': 2
-        }
+    map.on('click', 'country-fills', (e) => {
+      const frame = document.getElementById('country_info');
+      frame.src=`/map?country=${e.features[0].properties["ISO_A2"]}`;
+      frame.reload();
+      const grid = document.getElementById('map_container');
+      grid.classList.replace("sidebar_closed", "sidebar_open")
     });
 
-    // When the user moves their mouse over the state-fill layer, we'll update the
-    // feature state for the feature under the mouse.
-    map.on('mousemove', 'state-fills', (e) => {
-        if (e.features.length > 0) {
-            if (hoveredStateId) {
-                map.setFeatureState(
-                    {source: 'countries', id: hoveredStateId},
-                    {hover: false}
-                );
-            }
-            hoveredStateId = e.features[0].properties["ISO_A2"];
-            console.log(e.features["properties"]["ISO_A2"]);
-            map.setFeatureState(
-                {source: 'countries', id: hoveredStateId},
-                {hover: true}
-            );
-        }
+    // Change the cursor to a pointer when the mouse is over the states layer.
+    map.on('mouseenter', 'country-fills', () => {
+        map.getCanvas().style.cursor = 'pointer';
     });
 
-    // When the mouse leaves the state-fill layer, update the feature state of the
-    // previously hovered feature.
-    map.on('mouseleave', 'state-fills', () => {
-        if (hoveredStateId) {
-            map.setFeatureState(
-                {source: 'countries', id: hoveredStateId},
-                {hover: false}
-            );
-        }
-        hoveredStateId = null;
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'country-fills', () => {
+        map.getCanvas().style.cursor = '';
     });
+
+    map.on('data', (e) => {
+      if (e.sourceId !== 'countries' || !e.isSourceLoaded) return;
+
+      spinnerEl.remove();
+      backgroundEl.remove();
+    });
+
   }
 
   map.on('load', async () => {

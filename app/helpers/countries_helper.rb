@@ -1,34 +1,16 @@
 module CountriesHelper
-  def advisory_level_color(advisory)
-    if advisory && advisory.level == 1
-      return "bg-green-400"
-    elsif advisory && advisory.level == 2
-      return "bg-yellow-400"
-    elsif advisory && advisory.level == 3
-      return "bg-orange-400"
-    elsif advisory && advisory.level == 4
-      return "bg-red-400"
+  def advisory_level(advisory)
+    case advisory
+    when 1
+      return advise = { name: "Normal Precautions", color: "bg-green-400" }
+    when 2
+      return advise = { name: "Increased Caution", color: "bg-yellow-400" }
+    when 3
+      return advise = { name: "Reconsider Travel", color: "bg-orange-400" }
+    when 4
+      return advise = { name: "Do Not Travel", color: "bg-red-400" }
     else
-      return "bg-gray-200"
-    end
-  end
-
-  def advisory_level_name(advisory)
-    if advisory.present?
-      case advisory.level
-      when 1
-        return "No Advisory"
-      when 2
-        return "Increased Caution"
-      when 3
-        return "Reconsider Travel"
-      when 4
-        return "Do Not Travel"
-      else
-        return "—"
-      end
-    else
-      return "—"
+      return advise = { name: "—", color: "bg-gray-200" }
     end
   end
 
