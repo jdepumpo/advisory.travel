@@ -14,14 +14,19 @@ module CountriesHelper
   end
 
   def advisory_level_name(advisory)
-    if advisory && advisory.level == 1
-      return "No Advisory"
-    elsif advisory && advisory.level == 2
-      return "Increased Caution"
-    elsif advisory && advisory.level == 3
-      return "Reconsider Travel"
-    elsif advisory && advisory.level == 4
-      return "Do Not Travel"
+    if advisory.present?
+      case advisory.level
+      when 1
+        return "No Advisory"
+      when 2
+        return "Increased Caution"
+      when 3
+        return "Reconsider Travel"
+      when 4
+        return "Do Not Travel"
+      else
+        return "—"
+      end
     else
       return "—"
     end
@@ -29,5 +34,16 @@ module CountriesHelper
 
   def advisory_level_fraction(advisory)
     return "<sup>#{advisory.level}</sup>&#x2044;<sub>4</sub>"
+  end
+end
+
+def issuer_info(alpha2)
+  case alpha2
+  when "CA"
+    issue_info = { gov: "Government of Canada", flag: "🇨🇦" }
+  when "US"
+    issue_info = { gov: "United States Department of State", flag: "🇺🇸" }
+  else
+    "—"
   end
 end

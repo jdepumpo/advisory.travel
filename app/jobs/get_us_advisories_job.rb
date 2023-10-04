@@ -2,8 +2,6 @@ class GetUsAdvisoriesJob < ApplicationJob
   queue_as :default
   def perform(*args)
 
-    Advisory.delete_all
-
     state_to_iso_yml = YAML.load_file("#{Rails.root.to_s}/static_data/state_to_iso.yml")
 
     url = "https://travel.state.gov/_res/rss/TAsTWs.xml"

@@ -12,7 +12,7 @@ class CountriesController < ApplicationController
 
   def show
     @country_info = ISO3166::Country[@country.alpha2]
-    @advisories = Advisory.where(country: @country)
+    @advisories = Advisory.where(country: @country).order(pub_date: :desc)
   end
 
   private

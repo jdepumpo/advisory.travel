@@ -1,0 +1,27 @@
+<div class="mb-5 p-2 bg-slate-100 rounded">
+  <details class="group">
+    <summary class="font-medium cursor-pointer list-none">
+      <section class="grid grid-cols-2 sm:grid-cols-3 sm:grid-rows-auto gap-2 justify-between justify-items-between">
+        <span class="col-span-2 grow sm:col-span-1 p-2 rounded font-semibold text-center <%= advisory_level_color(advisory) %>"><%= advisory_level_name(advisory) %></span>
+        <p><%= heroicon "calendar" %> <%= time_ago(advisory.pub_date) %></p>
+        <div>
+          <p data-tippy-content="<%= issuer_info(advisory.issuer[:name])[:gov] %>">Issued by <%= issuer_info(advisory.issuer[:name])[:flag] %></p>
+        </div>
+        <section class="col-span-3 line-clamp-3 group-open:hidden text-neutral-600 mt-3 list-dot list-inside">
+          <%== advisory.body %>
+        </section>
+        <span class="col-span-3 bg-slate-200 rounded p-2 flex flex-row">
+          <span class="group-open:hidden">View More</span>
+          <span class="hidden group-open:block">View Less</span>
+          <span class="transition group-open:rotate-180">
+            <svg fill="none" height="30" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </span>
+      </section>
+    </summary>
+    <section class="text-neutral-600 mt-3 group-open:animate-fadeIn list-dot list-inside">
+        <%== advisory.body %>
+    </section>
+  </details>
+</div>
