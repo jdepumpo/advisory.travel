@@ -7,8 +7,9 @@
         <div>
           <p class="col-span-1 text-center"> <span class="inline" data-tippy-content="<%= issuer_info(advisory.issuer[:name])[:gov] %>">Issued by <%= issuer_info(advisory.issuer[:name])[:flag] %></span></p>
         </div>
+        <% if advisory.body.present? %>
         <section class="col-span-3 line-clamp-3 group-open:line-clamp-none text-neutral-600 mt-3 list-dot list-inside">
-          <%== advisory.body %>
+          <p><%= advisory.body.html_safe %></p>
         </section>
         <span class="col-span-3 bg-slate-200 rounded p-2 flex flex-row">
           <span class="group-open:hidden">View More</span>
@@ -18,6 +19,7 @@
             </svg>
           </span>
         </span>
+        <% end %>
       </section>
     </summary>
   </details>

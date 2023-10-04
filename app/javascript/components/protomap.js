@@ -62,6 +62,9 @@ export default class Protomap {
     console.log("geojson loaded")
     // The feature-state dependent fill-opacity expression will render the hover effect
     // when a feature's hover state is set to true.
+    const spinnerEl = document.getElementById('spinner');
+    const backgroundEl = document.getElementById('loading-background');
+
     map.addLayer({
         'id': 'country-fills',
         'type': 'fill',
@@ -108,6 +111,13 @@ export default class Protomap {
     // Change it back to a pointer when it leaves.
     map.on('mouseleave', 'country-fills', () => {
         map.getCanvas().style.cursor = '';
+    });
+
+    map.on('data', (e) => {
+      if (e.sourceId !== 'countries' || !e.isSourceLoaded) return;
+
+      spinnerEl.remove();
+      backgroundEl.remove();
     });
 
   }

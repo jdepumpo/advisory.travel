@@ -15,7 +15,7 @@ User.create!(
 
 ## Get countries
 Advisory.delete_all
-#Country.delete_all
+Country.delete_all
 
 def fetch_countries
   def fetch_country_data(alpha2)
@@ -64,7 +64,7 @@ def fetch_countries
   end
 end
 
-#fetch_countries
+fetch_countries
 
 Issuer.delete_all
 Issuer.create!(
@@ -124,6 +124,7 @@ def get_CA_advisories
     puts "_______FROM CA____________"
     country_data = element.search("td a")
     country = country_data.text.strip
+    country_url = country_data[0]["href"]
     puts "Country: #{country}"
 
     date_data = element.css("td[4]").children
@@ -134,7 +135,7 @@ def get_CA_advisories
     advisory = advisory_data.text.strip
     puts "Advisory: #{advisory}"
 
-    country_hash = { country: country, date: date, advisory_text: advisory }
+    country_hash = { country: country, date: date, advisory_text: advisory, source: "https://travel.gc.ca#{country_url}" }
     country_array.push(country_hash)
   end
 

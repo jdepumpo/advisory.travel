@@ -30,5 +30,4 @@ class GetUsAdvisoriesJob < ApplicationJob
       end
     end
   end
-  GetUsAdvisoriesJob.set(wait_until: Date.tomorrow.midnight).perform_later
 end
