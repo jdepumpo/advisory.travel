@@ -97,7 +97,7 @@ export default class Protomap {
 
     map.on('click', 'country-fills', (e) => {
       const frame = document.getElementById('country_info');
-      frame.src=`/map?country=${e.features[0].properties["ISO_A2"]}`;
+      frame.src=`/map?country=${e.features[0].properties["iso_a2"]}`;
       frame.reload();
       const grid = document.getElementById('map_container');
       grid.classList.replace("sidebar_closed", "sidebar_open")

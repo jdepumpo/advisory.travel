@@ -194,7 +194,7 @@ if geojson_data.key?('features') && geojson_data['features'].is_a?(Array)
   # Iterate through each feature and add an "id" property
   geojson_data['features'].each do |feature|
     feature['properties'] ||= {}  # Ensure "properties" exists
-    json_country = feature['properties']['ISO_A2']
+    json_country = feature['properties']['iso_a2']
     if country_lookup = Country.find_by(alpha2: json_country)
       country_average_level = country_lookup.advisories.average(:level)
       feature['properties']['level'] = country_average_level.to_i

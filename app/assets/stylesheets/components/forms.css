@@ -1,5 +1,5 @@
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]), textarea {
-  @apply w-full max-w-lg mt-2 mb-4 block rounded focus:border-amber-600 focus:ring focus:ring-amber-300 focus:ring-opacity-50;
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]), textarea, select {
+  @apply w-full max-w-lg mt-2 mb-2 block rounded focus:border-amber-600 focus:ring focus:ring-amber-300 focus:ring-opacity-50;
 }
 
 input[type="file"] {

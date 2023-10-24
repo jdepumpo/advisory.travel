@@ -5,7 +5,7 @@
         <span class="col-span-3 md:col-span-1 p-2 rounded font-semibold text-center <%= advisory_level(advisory.level)[:color] %>"><%= advisory_level(advisory.level)[:name] %></span>
         <p class="col-span-1 justify-self-center"><%= heroicon "calendar" %> <%= time_ago(advisory.pub_date) %></p>
         <div>
-          <p class="col-span-1 text-center"> <span class="inline" data-tippy-content="<%= issuer_info(advisory.issuer[:name])[:gov] %>">Issued by <%= issuer_info(advisory.issuer[:name])[:flag] %></span></p>
+          <p class="col-span-1 text-center"> <span class="inline" alt="<%= issuer_info(advisory.issuer[:name])[:gov] %>" data-tippy-content="<%= issuer_info(advisory.issuer[:name])[:gov] %>">Issued by <%= issuer_info(advisory.issuer[:name])[:flag] %></span></p>
         </div>
         <% if advisory.body.present? %>
         <section class="col-span-3 line-clamp-3 group-open:line-clamp-none text-neutral-600 mt-3 list-dot list-inside">

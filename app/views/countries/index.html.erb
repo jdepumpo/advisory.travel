@@ -2,11 +2,25 @@
 <h1>Countries</h1>
 
 <%= search_form_for @q, data: { turbo_frame: "search" } do |f| %>
-  <div class="relative">
-    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-      <%= heroicon "magnifying-glass" %>
+  <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-3">
+    <div class="relative col-span-2 justify-stretch">
+      <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+        <%= heroicon "magnifying-glass" %>
+      </div>
+      <%= f.text_field :name_cont, class: "search-input p-3 pl-10 text-sm", onkeyup: "search()", placeholder: "Country Name" %>
     </div>
-    <%= f.text_field :name_or_region_cont, class: "search-input p-3 pl-10 text-sm", onkeyup: "search()", placeholder: "Country Name or Region ..." %>
+    <div class="relative">
+      <div class="flex absolute inset-y-1 left-0 items-center pl-3 pointer-events-none">
+        <%= heroicon "globe-alt" %>
+      </div>
+      <%= f.select :region_eq, @regions, { include_blank: "World" }, { class: "region-input p-3 pl-10 text-sm", onchange: "search()" } %>
+    </div>
+    <div class="relative">
+      <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+        <%= heroicon "flag" %>
+      </div>
+      <%= f.select :advisories_level_eq, [["Normal Precautions", 1], ["Increased Caution", 2], ["Reconsider Travel", 3], ["Do Not Travel", 4]], { include_blank: "All Levels" }, { class: "level-input p-3 pl-10 text-sm", onchange: "search()" } %>
+    </div>
   </div>
 <% end %>
 
