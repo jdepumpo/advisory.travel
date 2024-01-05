@@ -17,7 +17,7 @@ gem "faker", "~> 2"
 gem "countries"
 gem "rss"
 gem "money"
-gem "sidekiq", "< 7"
+gem "sidekiq", "< 8"
 gem "sidekiq-failures", "~> 1.0"
 
 # Front-end
