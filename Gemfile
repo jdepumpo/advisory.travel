@@ -19,6 +19,7 @@ gem "rss"
 gem "money"
 gem "sidekiq", "< 8"
 gem "sidekiq-failures", "~> 1.0"
+gem 'sitemap_generator'
 
 # Front-end
 gem "sprockets-rails", "~> 3.4"
