@@ -17,8 +17,6 @@ gem "faker", "~> 2"
 gem "countries"
 gem "rss"
 gem "money"
-gem "sidekiq", "< 8"
-gem "sidekiq-failures", "~> 1.0"
 gem 'sitemap_generator'
 
 # Front-end
@@ -35,5 +33,3 @@ group :development do
 end
 
 gem "dockerfile-rails", ">= 1.5", :group => :development
-
-gem "redis", "~> 5.0"
