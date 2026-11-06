@@ -17,16 +17,16 @@
     </div>
 
     <div class="flex flex-wrap gap-2 md:flex-row md:gap-x-4 bg-slate-300 rounded-b p-2 text-sm text-slate-700 justify-center items-center">
-      <span class="bg-[#228b22]/50 p-2 rounded font-semibold">No Advisory</span>
-      <span class="bg-[#ffd800]/50 p-2 rounded font-semibold">Exercise Caution</span>
-      <span class="bg-[#ff8c00]/50 p-2 rounded font-semibold">Reconsider Travel</span>
-      <span class="bg-[#ae0c00]/50 p-2 rounded font-semibold">Do Not Travel</span>
+      <span class="bg-[#228b22]/50 p-2 rounded-sm font-semibold">No Advisory</span>
+      <span class="bg-[#ffd800]/50 p-2 rounded-sm font-semibold">Exercise Caution</span>
+      <span class="bg-[#ff8c00]/50 p-2 rounded-sm font-semibold">Reconsider Travel</span>
+      <span class="bg-[#ae0c00]/50 p-2 rounded-sm font-semibold">Do Not Travel</span>
     </div>
   </section>
 
   <%= turbo_frame_tag "country_info" do %>
     <% if params[:country] %>
-      <section class="items-stretch card my-2 rounded-lg sm:rounded">
+      <section class="items-stretch card my-2 rounded-lg sm:rounded-sm">
       <div id="sidebar_container" class="closed">
         <div class="flex justify-end">
           <button onClick="
@@ -34,7 +34,7 @@
           grid.classList.replace('sidebar_open', 'sidebar_closed');
           const frame = document.getElementById('country_info');
           frame.innerHTML = '';"
-          class="p-2 rounded bg-slate-300"><%= heroicon "x-circle", options: { class: "text-slate-700 text-2xl block" } %></button>
+          class="p-2 rounded-sm bg-slate-300"><%= heroicon "x-circle", options: { class: "text-slate-700 text-2xl block" } %></button>
         </div>
       </div>
       <% if @country %>
@@ -43,7 +43,7 @@
         <hr class="mt-8">
           <div class="grid divide-y divide-neutral-200 mt-8">
             <%= render partial: "countries/partials/advisories/avg_advisory", locals: { advisory: @advisories } %>
-            <a class="p-3 rounded no-underline bg-amber-800 text-center font-bold text-white" target="_top" href="<%= country_path(@country.alpha2) %>">See All Advisories</a>
+            <a class="p-3 rounded-sm no-underline bg-amber-800 text-center font-bold text-white" target="_top" href="<%= country_path(@country.alpha2) %>">See All Advisories</a>
           </div>
         <% else %>
           <%= render "countries/partials/advisories/no_advisory" %>

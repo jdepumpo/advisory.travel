@@ -5,7 +5,7 @@ class CountriesController < ApplicationController
 
   def index
     @q = Country.ransack(params[:q])
-    @pagy, @countries = pagy(@q.result.includes(:advisories).order(name: :asc), items: 30)
+    @pagy, @countries = pagy(@q.result.includes(:advisories).order(name: :asc), limit: 30)
     @country_info = ISO3166::Country[@country]
     @regions = ISO3166::Data.cache.map {|_,v| v['region']}.uniq.sort.delete_if(&:blank?)
   end
@@ -18,7 +18,7 @@ class CountriesController < ApplicationController
   private
 
   def set_country
-    @country = Country.find_by(alpha2: params[:id])
+    @country = Country.find_by!(alpha2: params[:id])
   end
 
 end

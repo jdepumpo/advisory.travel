@@ -1,8 +1,8 @@
-<div class="mb-5 p-2 bg-slate-100 rounded">
+<div class="mb-5 p-2 bg-slate-100 rounded-sm">
   <details class="group">
     <summary class="font-medium cursor-pointer list-none">
       <section class="grid grid-cols-2 md:grid-cols-3 md:grid-rows-auto gap-2 items-center">
-        <span class="col-span-3 md:col-span-1 p-2 rounded font-semibold text-center <%= advisory_level(advisory.level)[:color] %>"><%= advisory_level(advisory.level)[:name] %></span>
+        <span class="col-span-3 md:col-span-1 p-2 rounded-sm font-semibold text-center <%= advisory_level(advisory.level)[:color] %>"><%= advisory_level(advisory.level)[:name] %></span>
         <p class="col-span-1 justify-self-center"><%= heroicon "calendar" %> <%= time_ago(advisory.pub_date) %></p>
         <div>
           <p class="col-span-1 text-center"> <span class="inline" alt="<%= issuer_info(advisory.issuer[:name])[:gov] %>" data-tippy-content="<%= issuer_info(advisory.issuer[:name])[:gov] %>">Issued by <%= issuer_info(advisory.issuer[:name])[:flag] %></span></p>
@@ -11,7 +11,7 @@
         <section class="col-span-3 line-clamp-3 group-open:line-clamp-none text-neutral-600 mt-3 list-dot list-inside">
           <p><%= advisory.body.html_safe %></p>
         </section>
-        <span class="col-span-3 bg-slate-200 rounded p-2 flex flex-row">
+        <span class="col-span-3 bg-slate-200 rounded-sm p-2 flex flex-row">
           <span class="group-open:hidden">View More</span>
           <span class="hidden group-open:block">View Less</span>
           <span class="transition group-open:rotate-180">

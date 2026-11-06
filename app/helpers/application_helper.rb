@@ -1,5 +1,4 @@
 module ApplicationHelper
-  include Pagy::Frontend
   include Heroicon::Engine.helpers
 
   def page_title
