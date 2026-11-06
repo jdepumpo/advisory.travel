@@ -17,12 +17,25 @@ class AdvisoryImporter
   US_FEED_URL = "https://travel.state.gov/_res/rss/TAsTWs.xml".freeze
   CA_URL = "https://travel.gc.ca/travelling/advisories".freeze
 
-  CA_LEVELS = {
-    "Take normal security precautions" => 1,
+  # Matched as prefixes, since the text may carry "(with regional advisories)"
+  CA_LEVEL_TEXT = {
+    "Exercise normal security precautions" => 1,
+    "Take normal security precautions" => 1, # wording used before 2026
     "Exercise a high degree of caution" => 2,
     "Avoid non-essential travel" => 3,
     "Avoid all travel" => 4
   }.freeze
+
+  # Fallback: the risk icon's filename, e.g. /images/icons/increased-caution.svg
+  CA_LEVEL_ICONS = {
+    "normal-precautions" => 1,
+    "increased-caution" => 2,
+    "reconsider-travel" => 3,
+    "do-not-travel" => 4
+  }.freeze
+
+  # Abort if more than this share of CA rows can't be classified
+  MAX_UNKNOWN_LEVEL_SHARE = 0.1
 
   def self.run = new.run
 
@@ -115,17 +128,25 @@ class AdvisoryImporter
   def fetch_ca_advisories
     doc = Nokogiri::HTML.parse(URI.open(CA_URL).read)
 
-    doc.search("main table tbody tr").filter_map do |row|
+    rows = doc.search("main table tbody tr")
+    unknown = []
+
+    advisories = rows.filter_map do |row|
       link = row.at_css("td a") or next
       name = link.text.strip
+
+      level = ca_level(row)
+      unless level
+        unknown << "#{name}: #{row.at_css('td div')&.text.to_s.squish.inspect}"
+        next
+      end
+
       iso = ISO3166::Country.find_country_by_any_name(name)
       unless iso
         log "CA: no ISO match for #{name.inspect}"
         next
       end
 
-      advisory_text = row.at_css("td div")&.text.to_s.strip
-      level = CA_LEVELS.find { |prefix, _| advisory_text.start_with?(prefix) }&.last || 0
       # Prefer the semantic class; fall back to the last cell
       date_text = (row.at_css("td.timestamp") || row.css("td").last)&.text.to_s.strip
 
@@ -136,5 +157,22 @@ class AdvisoryImporter
         source: URI.join("https://travel.gc.ca", link["href"].to_s).to_s
       }
     end
+
+    if unknown.any?
+      log "CA: #{unknown.size} rows with unrecognized risk level:\n  #{unknown.join("\n  ")}"
+      if unknown.size > rows.size * MAX_UNKNOWN_LEVEL_SHARE
+        raise ImportError, "#{unknown.size}/#{rows.size} CA rows have an unrecognized risk level - wording may have changed"
+      end
+    end
+
+    advisories
+  end
+
+  def ca_level(row)
+    text = row.at_css("td div")&.text.to_s.squish
+    CA_LEVEL_TEXT.each { |prefix, level| return level if text.start_with?(prefix) }
+
+    icon = row.at_css("td img")&.[]("src").to_s[%r{/([\w-]+)\.svg\z}, 1]
+    CA_LEVEL_ICONS[icon]
   end
 end
