@@ -8,6 +8,9 @@ class MapsController < ApplicationController
 
   # Country shapes with each country's current average advisory level merged in.
   def countries
+    # Always revalidate: unchanged data costs a 304, and new levels show up
+    # right after the daily refresh instead of after a cache expiry.
+    expires_now
     return unless stale?(etag: Advisory.maximum(:updated_at), public: true)
 
     levels = Country.joins(:advisories).group(:alpha2).average(:level)
@@ -17,7 +20,6 @@ class MapsController < ApplicationController
       feature["properties"]["level"] = levels[feature["properties"]["iso_a2"]].to_i
     end
 
-    expires_in 1.hour, public: true
     render json: geojson, content_type: "application/geo+json"
   end
 
