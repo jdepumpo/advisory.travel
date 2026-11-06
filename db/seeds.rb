@@ -119,15 +119,16 @@ def get_CA_advisories
     country_url = country_data[0]["href"]
     puts "Country: #{country}"
 
-    date_data = element.css("td[4]").children
-    date = date_data.text.strip
+    # Column layout has changed before; prefer the semantic class, fall back to the last cell
+    date_cell = element.at_css("td.timestamp") || element.css("td").last
+    date = date_cell&.text.to_s.strip
     puts "Last updated: #{date}"
 
     advisory_data = element.search("td div")
     advisory = advisory_data.text.strip
     puts "Advisory: #{advisory}"
 
-    country_hash = { country: country, date: date, advisory_text: advisory, source: "https://travel.gc.ca#{country_url}" }
+    country_hash = { country: country, date: date, advisory_text: advisory, source: URI.join("https://travel.gc.ca", country_url.to_s).to_s }
     country_array.push(country_hash)
   end
 

@@ -23,6 +23,8 @@ module ApplicationHelper
   end
 
   def time_ago(time_object)
+    return "on an unknown date" if time_object.blank?
+
     "#{time_ago_in_words(time_object)} ago"
   end
 
