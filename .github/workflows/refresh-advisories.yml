@@ -1,0 +1,23 @@
+name: Refresh advisories
+
+on:
+  schedule:
+    - cron: "17 9 * * *" # daily, 09:17 UTC
+  workflow_dispatch: # allow manual runs from the Actions tab
+
+concurrency:
+  group: refresh-advisories
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4 # provides fly.toml
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      # Starts a temporary machine from the latest deployed image (with the
+      # app's secrets), runs the import, then destroys the machine.
+      - run: flyctl console --command "/rails/bin/rails advisories:refresh"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
