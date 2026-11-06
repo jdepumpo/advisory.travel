@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/pages/:page" => "pages#show", as: :page
 
   get "/map" => "maps#index"
+  get "/map/countries.geojson" => "maps#countries", as: :map_countries
 
   match '/404', to: 'errors#not_found', via: :all
   match '/422', to: 'errors#internal_server_error', via: :all

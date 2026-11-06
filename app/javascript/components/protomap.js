@@ -57,7 +57,7 @@ export default class Protomap {
     map.addSource('countries', {
       'type': 'geojson',
       'data':
-          '/map_data/countries.geojson'
+          '/map/countries.geojson'
     });
     console.log("geojson loaded")
     // The feature-state dependent fill-opacity expression will render the hover effect
