@@ -16,21 +16,6 @@
           </div>
         </div>
       </div>
-      <!--
-      <div class="hidden sm:block">
-        <div class="ml-4 flex items-center md:ml-6">
-          <div class="relative ml-3">
-            <% if user_signed_in? %>
-              <a href="<%= edit_user_path %>" class="flex max-w-xs items-center rounded-full bg-amber-800 text-sm">
-                <%= avatar(current_user) %>
-              </a>
-            <% else %>
-              <%= link_to "Sign in", new_user_session_path, class: "text-amber-300 hover:bg-amber-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-      -->
       <div class="sm:hidden">
         <button class="<%= nav_link_class(nil) %>" onclick="toggleMenu()">
           <%= heroicon "bars-3" %>
@@ -44,28 +29,6 @@
       <a href="<%= root_path %>" class="<%= nav_link_class("home", "block") %>">Home</a>
       <a href="<%= countries_path %>" class="<%= nav_link_class("countries", "block") %>">Countries</a>
       <a href="<%= map_path %>" class="<%= nav_link_class("maps", "block") %>">Map</a>
-      <!--
-      <% unless user_signed_in? %>
-        <a href="<%= new_user_session_path %>" class="<%= nav_link_class(nil, "block") %>">Sign in</a>
-      <% end %>
-      -->
     </div>
-    <!--
-    <% if user_signed_in? %>
-      <div class="border-t border-amber-700 py-4">
-        <a href="<%= edit_user_path %>">
-          <div class="flex items-center px-5">
-            <div class="shrink-0">
-              <%= avatar(current_user) %>
-            </div>
-            <div class="ml-3">
-              <div class="text-base font-medium leading-none text-white"><%= current_user.name %></div>
-              <div class="text-sm font-medium leading-none text-amber-400"><%= current_user.email %></div>
-            </div>
-          </div>
-        </a>
-      </div>
-    <% end %>
-    -->
   </div>
 </nav>
