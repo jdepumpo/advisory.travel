@@ -1,0 +1,1507 @@
+{
+  "source": "https://gitlab.com/restcountries/restcountries/-/raw/master/src/main/resources/countriesV3.1.json",
+  "license": "MPL-2.0 (REST Countries, https://gitlab.com/restcountries/restcountries)",
+  "generated_at": "2026-11-06T02:19:18Z",
+  "countries": {
+    "AD": {
+      "capital": "Andorra la Vella",
+      "drives_on": "right",
+      "population": 88406,
+      "landlocked": true
+    },
+    "AE": {
+      "capital": "Abu Dhabi",
+      "drives_on": "right",
+      "population": 11294243,
+      "landlocked": false
+    },
+    "AF": {
+      "capital": "Kabul",
+      "drives_on": "right",
+      "population": 43844000,
+      "landlocked": true
+    },
+    "AG": {
+      "capital": "Saint John's",
+      "drives_on": "left",
+      "population": 103603,
+      "landlocked": false
+    },
+    "AI": {
+      "capital": "The Valley",
+      "drives_on": "left",
+      "population": 16010,
+      "landlocked": false
+    },
+    "AL": {
+      "capital": "Tirana",
+      "drives_on": "right",
+      "population": 2363314,
+      "landlocked": false
+    },
+    "AM": {
+      "capital": "Yerevan",
+      "drives_on": "right",
+      "population": 3076200,
+      "landlocked": true
+    },
+    "AO": {
+      "capital": "Luanda",
+      "drives_on": "right",
+      "population": 36170961,
+      "landlocked": false
+    },
+    "AQ": {
+      "capital": null,
+      "drives_on": "right",
+      "population": 1300,
+      "landlocked": false
+    },
+    "AR": {
+      "capital": "Buenos Aires",
+      "drives_on": "right",
+      "population": 46735004,
+      "landlocked": false
+    },
+    "AS": {
+      "capital": "Pago Pago",
+      "drives_on": "right",
+      "population": 49710,
+      "landlocked": false
+    },
+    "AT": {
+      "capital": "Vienna",
+      "drives_on": "right",
+      "population": 9200931,
+      "landlocked": true
+    },
+    "AU": {
+      "capital": "Canberra",
+      "drives_on": "left",
+      "population": 27536874,
+      "landlocked": false
+    },
+    "AW": {
+      "capital": "Oranjestad",
+      "drives_on": "right",
+      "population": 107566,
+      "landlocked": false
+    },
+    "AX": {
+      "capital": "Mariehamn",
+      "drives_on": "right",
+      "population": 30654,
+      "landlocked": false
+    },
+    "AZ": {
+      "capital": "Baku",
+      "drives_on": "right",
+      "population": 10241722,
+      "landlocked": true
+    },
+    "BA": {
+      "capital": "Sarajevo",
+      "drives_on": "right",
+      "population": 3422000,
+      "landlocked": false
+    },
+    "BB": {
+      "capital": "Bridgetown",
+      "drives_on": "left",
+      "population": 267800,
+      "landlocked": false
+    },
+    "BD": {
+      "capital": "Dhaka",
+      "drives_on": "left",
+      "population": 169828911,
+      "landlocked": false
+    },
+    "BE": {
+      "capital": "Brussels",
+      "drives_on": "right",
+      "population": 11825551,
+      "landlocked": false
+    },
+    "BF": {
+      "capital": "Ouagadougou",
+      "drives_on": "right",
+      "population": 24070553,
+      "landlocked": true
+    },
+    "BG": {
+      "capital": "Sofia",
+      "drives_on": "right",
+      "population": 6437360,
+      "landlocked": false
+    },
+    "BH": {
+      "capital": "Manama",
+      "drives_on": "right",
+      "population": 1594654,
+      "landlocked": false
+    },
+    "BI": {
+      "capital": "Gitega",
+      "drives_on": "right",
+      "population": 12332788,
+      "landlocked": true
+    },
+    "BJ": {
+      "capital": "Porto-Novo",
+      "drives_on": "right",
+      "population": 13224860,
+      "landlocked": false
+    },
+    "BL": {
+      "capital": "Gustavia",
+      "drives_on": "right",
+      "population": 10562,
+      "landlocked": false
+    },
+    "BM": {
+      "capital": "Hamilton",
+      "drives_on": "left",
+      "population": 64055,
+      "landlocked": false
+    },
+    "BN": {
+      "capital": "Bandar Seri Begawan",
+      "drives_on": "left",
+      "population": 455500,
+      "landlocked": false
+    },
+    "BO": {
+      "capital": "Sucre",
+      "drives_on": "right",
+      "population": 11365333,
+      "landlocked": true
+    },
+    "BQ": {
+      "capital": "Kralendijk",
+      "drives_on": "right",
+      "population": 31980,
+      "landlocked": false
+    },
+    "BR": {
+      "capital": "Brasília",
+      "drives_on": "right",
+      "population": 213421037,
+      "landlocked": false
+    },
+    "BS": {
+      "capital": "Nassau",
+      "drives_on": "left",
+      "population": 398165,
+      "landlocked": false
+    },
+    "BT": {
+      "capital": "Thimphu",
+      "drives_on": "left",
+      "population": 784043,
+      "landlocked": true
+    },
+    "BV": {
+      "capital": null,
+      "drives_on": "right",
+      "population": 0,
+      "landlocked": false
+    },
+    "BW": {
+      "capital": "Gaborone",
+      "drives_on": "left",
+      "population": 2359609,
+      "landlocked": true
+    },
+    "BY": {
+      "capital": "Minsk",
+      "drives_on": "right",
+      "population": 9109280,
+      "landlocked": true
+    },
+    "BZ": {
+      "capital": "Belmopan",
+      "drives_on": "right",
+      "population": 417634,
+      "landlocked": false
+    },
+    "CA": {
+      "capital": "Ottawa",
+      "drives_on": "right",
+      "population": 41651653,
+      "landlocked": false
+    },
+    "CC": {
+      "capital": "West Island",
+      "drives_on": "left",
+      "population": 593,
+      "landlocked": false
+    },
+    "CD": {
+      "capital": "Kinshasa",
+      "drives_on": "right",
+      "population": 112832000,
+      "landlocked": false
+    },
+    "CF": {
+      "capital": "Bangui",
+      "drives_on": "right",
+      "population": 6470307,
+      "landlocked": true
+    },
+    "CG": {
+      "capital": "Brazzaville",
+      "drives_on": "right",
+      "population": 6142180,
+      "landlocked": false
+    },
+    "CH": {
+      "capital": "Bern",
+      "drives_on": "right",
+      "population": 9082848,
+      "landlocked": true
+    },
+    "CI": {
+      "capital": "Yamoussoukro",
+      "drives_on": "right",
+      "population": 31719275,
+      "landlocked": false
+    },
+    "CK": {
+      "capital": "Avarua",
+      "drives_on": "left",
+      "population": 15040,
+      "landlocked": false
+    },
+    "CL": {
+      "capital": "Santiago",
+      "drives_on": "right",
+      "population": 20206953,
+      "landlocked": false
+    },
+    "CM": {
+      "capital": "Yaoundé",
+      "drives_on": "right",
+      "population": 29442327,
+      "landlocked": false
+    },
+    "CN": {
+      "capital": "Beijing",
+      "drives_on": "right",
+      "population": 1408280000,
+      "landlocked": false
+    },
+    "CO": {
+      "capital": "Bogotá",
+      "drives_on": "right",
+      "population": 53057212,
+      "landlocked": false
+    },
+    "CR": {
+      "capital": "San José",
+      "drives_on": "right",
+      "population": 5309625,
+      "landlocked": false
+    },
+    "CU": {
+      "capital": "Havana",
+      "drives_on": "right",
+      "population": 9748007,
+      "landlocked": false
+    },
+    "CV": {
+      "capital": "Praia",
+      "drives_on": "right",
+      "population": 491233,
+      "landlocked": false
+    },
+    "CW": {
+      "capital": "Willemstad",
+      "drives_on": "right",
+      "population": 156115,
+      "landlocked": false
+    },
+    "CX": {
+      "capital": "Flying Fish Cove",
+      "drives_on": "left",
+      "population": 1692,
+      "landlocked": false
+    },
+    "CY": {
+      "capital": "Nicosia",
+      "drives_on": "left",
+      "population": 1442614,
+      "landlocked": false
+    },
+    "CZ": {
+      "capital": "Prague",
+      "drives_on": "right",
+      "population": 10882341,
+      "landlocked": true
+    },
+    "DE": {
+      "capital": "Berlin",
+      "drives_on": "right",
+      "population": 83491249,
+      "landlocked": false
+    },
+    "DJ": {
+      "capital": "Djibouti",
+      "drives_on": "right",
+      "population": 1066809,
+      "landlocked": false
+    },
+    "DK": {
+      "capital": "Copenhagen",
+      "drives_on": "right",
+      "population": 6011488,
+      "landlocked": false
+    },
+    "DM": {
+      "capital": "Roseau",
+      "drives_on": "left",
+      "population": 67408,
+      "landlocked": false
+    },
+    "DO": {
+      "capital": "Santo Domingo",
+      "drives_on": "right",
+      "population": 10771504,
+      "landlocked": false
+    },
+    "DZ": {
+      "capital": "Algiers",
+      "drives_on": "right",
+      "population": 47400000,
+      "landlocked": false
+    },
+    "EC": {
+      "capital": "Quito",
+      "drives_on": "right",
+      "population": 18103660,
+      "landlocked": false
+    },
+    "EE": {
+      "capital": "Tallinn",
+      "drives_on": "right",
+      "population": 1369995,
+      "landlocked": false
+    },
+    "EG": {
+      "capital": "Cairo",
+      "drives_on": "right",
+      "population": 107271260,
+      "landlocked": false
+    },
+    "EH": {
+      "capital": "El Aaiún",
+      "drives_on": "right",
+      "population": 600904,
+      "landlocked": false
+    },
+    "ER": {
+      "capital": "Asmara",
+      "drives_on": "right",
+      "population": 3607000,
+      "landlocked": false
+    },
+    "ES": {
+      "capital": "Madrid",
+      "drives_on": "right",
+      "population": 49315949,
+      "landlocked": false
+    },
+    "ET": {
+      "capital": "Addis Ababa",
+      "drives_on": "right",
+      "population": 111652998,
+      "landlocked": true
+    },
+    "FI": {
+      "capital": "Helsinki",
+      "drives_on": "right",
+      "population": 5650325,
+      "landlocked": false
+    },
+    "FJ": {
+      "capital": "Suva",
+      "drives_on": "left",
+      "population": 900869,
+      "landlocked": false
+    },
+    "FK": {
+      "capital": "Stanley",
+      "drives_on": "left",
+      "population": 3662,
+      "landlocked": false
+    },
+    "FM": {
+      "capital": "Palikir",
+      "drives_on": "right",
+      "population": 105564,
+      "landlocked": false
+    },
+    "FO": {
+      "capital": "Tórshavn",
+      "drives_on": "right",
+      "population": 54885,
+      "landlocked": false
+    },
+    "FR": {
+      "capital": "Paris",
+      "drives_on": "right",
+      "population": 66351959,
+      "landlocked": false
+    },
+    "GA": {
+      "capital": "Libreville",
+      "drives_on": "right",
+      "population": 2469296,
+      "landlocked": false
+    },
+    "GB": {
+      "capital": "London",
+      "drives_on": "left",
+      "population": 69281437,
+      "landlocked": false
+    },
+    "GD": {
+      "capital": "St. George's",
+      "drives_on": "left",
+      "population": 109021,
+      "landlocked": false
+    },
+    "GE": {
+      "capital": "Tbilisi",
+      "drives_on": "right",
+      "population": 4000921,
+      "landlocked": false
+    },
+    "GF": {
+      "capital": "Cayenne",
+      "drives_on": "right",
+      "population": 292354,
+      "landlocked": false
+    },
+    "GG": {
+      "capital": "St. Peter Port",
+      "drives_on": "left",
+      "population": 64781,
+      "landlocked": false
+    },
+    "GH": {
+      "capital": "Accra",
+      "drives_on": "right",
+      "population": 33742380,
+      "landlocked": false
+    },
+    "GI": {
+      "capital": "Gibraltar",
+      "drives_on": "right",
+      "population": 38000,
+      "landlocked": false
+    },
+    "GL": {
+      "capital": "Nuuk",
+      "drives_on": "right",
+      "population": 56542,
+      "landlocked": false
+    },
+    "GM": {
+      "capital": "Banjul",
+      "drives_on": "right",
+      "population": 2422712,
+      "landlocked": false
+    },
+    "GN": {
+      "capital": "Conakry",
+      "drives_on": "right",
+      "population": 14363931,
+      "landlocked": false
+    },
+    "GP": {
+      "capital": "Basse-Terre",
+      "drives_on": "right",
+      "population": 378561,
+      "landlocked": false
+    },
+    "GQ": {
+      "capital": "Ciudad de la Paz",
+      "drives_on": "right",
+      "population": 1668768,
+      "landlocked": false
+    },
+    "GR": {
+      "capital": "Athens",
+      "drives_on": "right",
+      "population": 10400720,
+      "landlocked": false
+    },
+    "GS": {
+      "capital": "King Edward Point",
+      "drives_on": "right",
+      "population": 0,
+      "landlocked": false
+    },
+    "GT": {
+      "capital": "Guatemala City",
+      "drives_on": "right",
+      "population": 18079810,
+      "landlocked": false
+    },
+    "GU": {
+      "capital": "Hagåtña",
+      "drives_on": "right",
+      "population": 153836,
+      "landlocked": false
+    },
+    "GW": {
+      "capital": "Bissau",
+      "drives_on": "right",
+      "population": 1781308,
+      "landlocked": false
+    },
+    "GY": {
+      "capital": "Georgetown",
+      "drives_on": "left",
+      "population": 772975,
+      "landlocked": false
+    },
+    "HK": {
+      "capital": "City of Victoria",
+      "drives_on": "left",
+      "population": 7527500,
+      "landlocked": false
+    },
+    "HM": {
+      "capital": null,
+      "drives_on": "right",
+      "population": 0,
+      "landlocked": false
+    },
+    "HN": {
+      "capital": "Tegucigalpa",
+      "drives_on": "right",
+      "population": 9892632,
+      "landlocked": false
+    },
+    "HR": {
+      "capital": "Zagreb",
+      "drives_on": "right",
+      "population": 3866233,
+      "landlocked": false
+    },
+    "HT": {
+      "capital": "Port-au-Prince",
+      "drives_on": "right",
+      "population": 11867032,
+      "landlocked": false
+    },
+    "HU": {
+      "capital": "Budapest",
+      "drives_on": "right",
+      "population": 9539502,
+      "landlocked": true
+    },
+    "ID": {
+      "capital": "Jakarta",
+      "drives_on": "left",
+      "population": 284438782,
+      "landlocked": false
+    },
+    "IE": {
+      "capital": "Dublin",
+      "drives_on": "left",
+      "population": 5458600,
+      "landlocked": false
+    },
+    "IL": {
+      "capital": "Jerusalem",
+      "drives_on": "right",
+      "population": 10134800,
+      "landlocked": false
+    },
+    "IM": {
+      "capital": "Douglas",
+      "drives_on": "left",
+      "population": 84530,
+      "landlocked": false
+    },
+    "IN": {
+      "capital": "New Delhi",
+      "drives_on": "left",
+      "population": 1417492000,
+      "landlocked": false
+    },
+    "IO": {
+      "capital": "Diego Garcia",
+      "drives_on": "right",
+      "population": 0,
+      "landlocked": false
+    },
+    "IQ": {
+      "capital": "Baghdad",
+      "drives_on": "right",
+      "population": 46118793,
+      "landlocked": false
+    },
+    "IR": {
+      "capital": "Tehran",
+      "drives_on": "right",
+      "population": 85961000,
+      "landlocked": false
+    },
+    "IS": {
+      "capital": "Reykjavik",
+      "drives_on": "right",
+      "population": 391810,
+      "landlocked": false
+    },
+    "IT": {
+      "capital": "Rome",
+      "drives_on": "right",
+      "population": 58927633,
+      "landlocked": false
+    },
+    "JE": {
+      "capital": "Saint Helier",
+      "drives_on": "left",
+      "population": 103267,
+      "landlocked": false
+    },
+    "JM": {
+      "capital": "Kingston",
+      "drives_on": "left",
+      "population": 2825544,
+      "landlocked": false
+    },
+    "JO": {
+      "capital": "Amman",
+      "drives_on": "right",
+      "population": 11734000,
+      "landlocked": false
+    },
+    "JP": {
+      "capital": "Tokyo",
+      "drives_on": "left",
+      "population": 123210000,
+      "landlocked": false
+    },
+    "KE": {
+      "capital": "Nairobi",
+      "drives_on": "left",
+      "population": 53330978,
+      "landlocked": false
+    },
+    "KG": {
+      "capital": "Bishkek",
+      "drives_on": "right",
+      "population": 7281800,
+      "landlocked": true
+    },
+    "KH": {
+      "capital": "Phnom Penh",
+      "drives_on": "right",
+      "population": 17577760,
+      "landlocked": false
+    },
+    "KI": {
+      "capital": "South Tarawa",
+      "drives_on": "left",
+      "population": 120740,
+      "landlocked": false
+    },
+    "KM": {
+      "capital": "Moroni",
+      "drives_on": "right",
+      "population": 919901,
+      "landlocked": false
+    },
+    "KN": {
+      "capital": "Basseterre",
+      "drives_on": "left",
+      "population": 51320,
+      "landlocked": false
+    },
+    "KP": {
+      "capital": "Pyongyang",
+      "drives_on": "right",
+      "population": 25950000,
+      "landlocked": false
+    },
+    "KR": {
+      "capital": "Seoul",
+      "drives_on": "right",
+      "population": 51159889,
+      "landlocked": false
+    },
+    "KW": {
+      "capital": "Kuwait City",
+      "drives_on": "right",
+      "population": 4881254,
+      "landlocked": false
+    },
+    "KY": {
+      "capital": "George Town",
+      "drives_on": "left",
+      "population": 84738,
+      "landlocked": false
+    },
+    "KZ": {
+      "capital": "Astana",
+      "drives_on": "right",
+      "population": 20426568,
+      "landlocked": true
+    },
+    "LA": {
+      "capital": "Vientiane",
+      "drives_on": "right",
+      "population": 7647000,
+      "landlocked": true
+    },
+    "LB": {
+      "capital": "Beirut",
+      "drives_on": "right",
+      "population": 5490000,
+      "landlocked": false
+    },
+    "LC": {
+      "capital": "Castries",
+      "drives_on": "left",
+      "population": 184100,
+      "landlocked": false
+    },
+    "LI": {
+      "capital": "Vaduz",
+      "drives_on": "right",
+      "population": 40900,
+      "landlocked": true
+    },
+    "LK": {
+      "capital": "Sri Jayawardenepura Kotte",
+      "drives_on": "left",
+      "population": 21763170,
+      "landlocked": false
+    },
+    "LR": {
+      "capital": "Monrovia",
+      "drives_on": "right",
+      "population": 5248621,
+      "landlocked": false
+    },
+    "LS": {
+      "capital": "Maseru",
+      "drives_on": "left",
+      "population": 2116427,
+      "landlocked": true
+    },
+    "LT": {
+      "capital": "Vilnius",
+      "drives_on": "right",
+      "population": 2894886,
+      "landlocked": false
+    },
+    "LU": {
+      "capital": "Luxembourg",
+      "drives_on": "right",
+      "population": 681973,
+      "landlocked": true
+    },
+    "LV": {
+      "capital": "Riga",
+      "drives_on": "right",
+      "population": 1829000,
+      "landlocked": false
+    },
+    "LY": {
+      "capital": "Tripoli",
+      "drives_on": "right",
+      "population": 7459000,
+      "landlocked": false
+    },
+    "MA": {
+      "capital": "Rabat",
+      "drives_on": "right",
+      "population": 36828330,
+      "landlocked": false
+    },
+    "MC": {
+      "capital": "Monaco",
+      "drives_on": "right",
+      "population": 38423,
+      "landlocked": false
+    },
+    "MD": {
+      "capital": "Chișinău",
+      "drives_on": "right",
+      "population": 2749076,
+      "landlocked": true
+    },
+    "ME": {
+      "capital": "Podgorica",
+      "drives_on": "right",
+      "population": 623327,
+      "landlocked": false
+    },
+    "MF": {
+      "capital": "Marigot",
+      "drives_on": "right",
+      "population": 31496,
+      "landlocked": false
+    },
+    "MG": {
+      "capital": "Antananarivo",
+      "drives_on": "right",
+      "population": 31727042,
+      "landlocked": false
+    },
+    "MH": {
+      "capital": "Majuro",
+      "drives_on": "right",
+      "population": 42418,
+      "landlocked": false
+    },
+    "MK": {
+      "capital": "Skopje",
+      "drives_on": "right",
+      "population": 1822612,
+      "landlocked": true
+    },
+    "ML": {
+      "capital": "Bamako",
+      "drives_on": "right",
+      "population": 22395489,
+      "landlocked": true
+    },
+    "MM": {
+      "capital": "Naypyidaw",
+      "drives_on": "right",
+      "population": 51316756,
+      "landlocked": false
+    },
+    "MN": {
+      "capital": "Ulan Bator",
+      "drives_on": "right",
+      "population": 3544835,
+      "landlocked": true
+    },
+    "MO": {
+      "capital": null,
+      "drives_on": "left",
+      "population": 685900,
+      "landlocked": false
+    },
+    "MP": {
+      "capital": "Saipan",
+      "drives_on": "right",
+      "population": 47329,
+      "landlocked": false
+    },
+    "MQ": {
+      "capital": "Fort-de-France",
+      "drives_on": "right",
+      "population": 349925,
+      "landlocked": false
+    },
+    "MR": {
+      "capital": "Nouakchott",
+      "drives_on": "right",
+      "population": 4927532,
+      "landlocked": false
+    },
+    "MS": {
+      "capital": "Plymouth",
+      "drives_on": "left",
+      "population": 4386,
+      "landlocked": false
+    },
+    "MT": {
+      "capital": "Valletta",
+      "drives_on": "left",
+      "population": 574250,
+      "landlocked": false
+    },
+    "MU": {
+      "capital": "Port Louis",
+      "drives_on": "left",
+      "population": 1243741,
+      "landlocked": false
+    },
+    "MV": {
+      "capital": "Malé",
+      "drives_on": "left",
+      "population": 515132,
+      "landlocked": false
+    },
+    "MW": {
+      "capital": "Lilongwe",
+      "drives_on": "left",
+      "population": 20734262,
+      "landlocked": true
+    },
+    "MX": {
+      "capital": "Mexico City",
+      "drives_on": "right",
+      "population": 130575786,
+      "landlocked": false
+    },
+    "MY": {
+      "capital": "Kuala Lumpur",
+      "drives_on": "left",
+      "population": 34231700,
+      "landlocked": false
+    },
+    "MZ": {
+      "capital": "Maputo",
+      "drives_on": "left",
+      "population": 34090466,
+      "landlocked": false
+    },
+    "NA": {
+      "capital": "Windhoek",
+      "drives_on": "left",
+      "population": 3022401,
+      "landlocked": false
+    },
+    "NC": {
+      "capital": "Nouméa",
+      "drives_on": "right",
+      "population": 264596,
+      "landlocked": false
+    },
+    "NE": {
+      "capital": "Niamey",
+      "drives_on": "right",
+      "population": 26312034,
+      "landlocked": true
+    },
+    "NF": {
+      "capital": "Kingston",
+      "drives_on": "left",
+      "population": 2188,
+      "landlocked": false
+    },
+    "NG": {
+      "capital": "Abuja",
+      "drives_on": "right",
+      "population": 223800000,
+      "landlocked": false
+    },
+    "NI": {
+      "capital": "Managua",
+      "drives_on": "right",
+      "population": 6803886,
+      "landlocked": false
+    },
+    "NL": {
+      "capital": "Amsterdam",
+      "drives_on": "right",
+      "population": 18100436,
+      "landlocked": false
+    },
+    "NO": {
+      "capital": "Oslo",
+      "drives_on": "right",
+      "population": 5606944,
+      "landlocked": false
+    },
+    "NP": {
+      "capital": "Kathmandu",
+      "drives_on": "left",
+      "population": 29911840,
+      "landlocked": true
+    },
+    "NR": {
+      "capital": "Yaren",
+      "drives_on": "left",
+      "population": 11680,
+      "landlocked": false
+    },
+    "NU": {
+      "capital": "Alofi",
+      "drives_on": "left",
+      "population": 1681,
+      "landlocked": false
+    },
+    "NZ": {
+      "capital": "Wellington",
+      "drives_on": "left",
+      "population": 5324700,
+      "landlocked": false
+    },
+    "OM": {
+      "capital": "Muscat",
+      "drives_on": "right",
+      "population": 5343630,
+      "landlocked": false
+    },
+    "PA": {
+      "capital": "Panama City",
+      "drives_on": "right",
+      "population": 4064780,
+      "landlocked": false
+    },
+    "PE": {
+      "capital": "Lima",
+      "drives_on": "right",
+      "population": 34350244,
+      "landlocked": false
+    },
+    "PF": {
+      "capital": "Papeetē",
+      "drives_on": "right",
+      "population": 279500,
+      "landlocked": false
+    },
+    "PG": {
+      "capital": "Port Moresby",
+      "drives_on": "left",
+      "population": 11781559,
+      "landlocked": false
+    },
+    "PH": {
+      "capital": "Manila",
+      "drives_on": "right",
+      "population": 114123600,
+      "landlocked": false
+    },
+    "PK": {
+      "capital": "Islamabad",
+      "drives_on": "left",
+      "population": 241499431,
+      "landlocked": false
+    },
+    "PL": {
+      "capital": "Warsaw",
+      "drives_on": "right",
+      "population": 37392000,
+      "landlocked": false
+    },
+    "PM": {
+      "capital": "Saint-Pierre",
+      "drives_on": "right",
+      "population": 5819,
+      "landlocked": false
+    },
+    "PN": {
+      "capital": "Adamstown",
+      "drives_on": "left",
+      "population": 35,
+      "landlocked": false
+    },
+    "PR": {
+      "capital": "San Juan",
+      "drives_on": "right",
+      "population": 3203295,
+      "landlocked": false
+    },
+    "PS": {
+      "capital": "Ramallah",
+      "drives_on": "right",
+      "population": 5483450,
+      "landlocked": false
+    },
+    "PT": {
+      "capital": "Lisbon",
+      "drives_on": "right",
+      "population": 10749635,
+      "landlocked": false
+    },
+    "PW": {
+      "capital": "Ngerulmud",
+      "drives_on": "right",
+      "population": 16733,
+      "landlocked": false
+    },
+    "PY": {
+      "capital": "Asunción",
+      "drives_on": "right",
+      "population": 6109644,
+      "landlocked": true
+    },
+    "QA": {
+      "capital": "Doha",
+      "drives_on": "right",
+      "population": 3173024,
+      "landlocked": false
+    },
+    "RE": {
+      "capital": "Saint-Denis",
+      "drives_on": "right",
+      "population": 896175,
+      "landlocked": false
+    },
+    "RO": {
+      "capital": "Bucharest",
+      "drives_on": "right",
+      "population": 19036031,
+      "landlocked": false
+    },
+    "RS": {
+      "capital": "Belgrade",
+      "drives_on": "right",
+      "population": 6567783,
+      "landlocked": true
+    },
+    "RU": {
+      "capital": "Moscow",
+      "drives_on": "right",
+      "population": 146028325,
+      "landlocked": false
+    },
+    "RW": {
+      "capital": "Kigali",
+      "drives_on": "right",
+      "population": 14104969,
+      "landlocked": true
+    },
+    "SA": {
+      "capital": "Riyadh",
+      "drives_on": "right",
+      "population": 35300280,
+      "landlocked": false
+    },
+    "SB": {
+      "capital": "Honiara",
+      "drives_on": "left",
+      "population": 750325,
+      "landlocked": false
+    },
+    "SC": {
+      "capital": "Victoria",
+      "drives_on": "left",
+      "population": 122729,
+      "landlocked": false
+    },
+    "SD": {
+      "capital": "Khartoum",
+      "drives_on": "right",
+      "population": 51662000,
+      "landlocked": false
+    },
+    "SE": {
+      "capital": "Stockholm",
+      "drives_on": "right",
+      "population": 10605098,
+      "landlocked": false
+    },
+    "SG": {
+      "capital": "Singapore",
+      "drives_on": "left",
+      "population": 6110200,
+      "landlocked": false
+    },
+    "SH": {
+      "capital": "Jamestown",
+      "drives_on": "left",
+      "population": 5651,
+      "landlocked": false
+    },
+    "SI": {
+      "capital": "Ljubljana",
+      "drives_on": "right",
+      "population": 2130638,
+      "landlocked": false
+    },
+    "SJ": {
+      "capital": "Longyearbyen",
+      "drives_on": "right",
+      "population": 2530,
+      "landlocked": false
+    },
+    "SK": {
+      "capital": "Bratislava",
+      "drives_on": "right",
+      "population": 5413813,
+      "landlocked": true
+    },
+    "SL": {
+      "capital": "Freetown",
+      "drives_on": "right",
+      "population": 9077691,
+      "landlocked": false
+    },
+    "SM": {
+      "capital": "City of San Marino",
+      "drives_on": "right",
+      "population": 34132,
+      "landlocked": true
+    },
+    "SN": {
+      "capital": "Dakar",
+      "drives_on": "right",
+      "population": 18593258,
+      "landlocked": false
+    },
+    "SO": {
+      "capital": "Mogadishu",
+      "drives_on": "right",
+      "population": 19655000,
+      "landlocked": false
+    },
+    "SR": {
+      "capital": "Paramaribo",
+      "drives_on": "left",
+      "population": 616500,
+      "landlocked": false
+    },
+    "SS": {
+      "capital": "Juba",
+      "drives_on": "right",
+      "population": 15786898,
+      "landlocked": true
+    },
+    "ST": {
+      "capital": "São Tomé",
+      "drives_on": "right",
+      "population": 209607,
+      "landlocked": false
+    },
+    "SV": {
+      "capital": "San Salvador",
+      "drives_on": "right",
+      "population": 6029976,
+      "landlocked": false
+    },
+    "SX": {
+      "capital": "Philipsburg",
+      "drives_on": "right",
+      "population": 41349,
+      "landlocked": false
+    },
+    "SY": {
+      "capital": "Damascus",
+      "drives_on": "right",
+      "population": 25620000,
+      "landlocked": false
+    },
+    "SZ": {
+      "capital": "Mbabane",
+      "drives_on": "left",
+      "population": 1235549,
+      "landlocked": true
+    },
+    "TC": {
+      "capital": "Cockburn Town",
+      "drives_on": "left",
+      "population": 50828,
+      "landlocked": false
+    },
+    "TD": {
+      "capital": "N'Djamena",
+      "drives_on": "right",
+      "population": 19340757,
+      "landlocked": true
+    },
+    "TF": {
+      "capital": "Port-aux-Français",
+      "drives_on": "right",
+      "population": 400,
+      "landlocked": false
+    },
+    "TG": {
+      "capital": "Lomé",
+      "drives_on": "right",
+      "population": 8095498,
+      "landlocked": false
+    },
+    "TH": {
+      "capital": "Bangkok",
+      "drives_on": "left",
+      "population": 65859640,
+      "landlocked": false
+    },
+    "TJ": {
+      "capital": "Dushanbe",
+      "drives_on": "right",
+      "population": 10499000,
+      "landlocked": true
+    },
+    "TK": {
+      "capital": "Fakaofo",
+      "drives_on": "left",
+      "population": 2608,
+      "landlocked": false
+    },
+    "TL": {
+      "capital": "Dili",
+      "drives_on": "left",
+      "population": 1391221,
+      "landlocked": false
+    },
+    "TM": {
+      "capital": "Ashgabat",
+      "drives_on": "right",
+      "population": 7057841,
+      "landlocked": true
+    },
+    "TN": {
+      "capital": "Tunis",
+      "drives_on": "right",
+      "population": 11972169,
+      "landlocked": false
+    },
+    "TO": {
+      "capital": "Nuku'alofa",
+      "drives_on": "left",
+      "population": 100179,
+      "landlocked": false
+    },
+    "TR": {
+      "capital": "Ankara",
+      "drives_on": "right",
+      "population": 85664944,
+      "landlocked": false
+    },
+    "TT": {
+      "capital": "Port of Spain",
+      "drives_on": "left",
+      "population": 1367764,
+      "landlocked": false
+    },
+    "TV": {
+      "capital": "Funafuti",
+      "drives_on": "left",
+      "population": 10643,
+      "landlocked": false
+    },
+    "TW": {
+      "capital": "Taipei",
+      "drives_on": "right",
+      "population": 23317031,
+      "landlocked": false
+    },
+    "TZ": {
+      "capital": "Dodoma",
+      "drives_on": "left",
+      "population": 68153004,
+      "landlocked": false
+    },
+    "UA": {
+      "capital": "Kyiv",
+      "drives_on": "right",
+      "population": 32862000,
+      "landlocked": false
+    },
+    "UG": {
+      "capital": "Kampala",
+      "drives_on": "left",
+      "population": 45905417,
+      "landlocked": true
+    },
+    "UM": {
+      "capital": "Washington DC",
+      "drives_on": "right",
+      "population": 0,
+      "landlocked": false
+    },
+    "US": {
+      "capital": "Washington, D.C.",
+      "drives_on": "right",
+      "population": 340110988,
+      "landlocked": false
+    },
+    "UY": {
+      "capital": "Montevideo",
+      "drives_on": "right",
+      "population": 3499451,
+      "landlocked": false
+    },
+    "UZ": {
+      "capital": "Tashkent",
+      "drives_on": "right",
+      "population": 37859698,
+      "landlocked": true
+    },
+    "VA": {
+      "capital": "Vatican City",
+      "drives_on": "right",
+      "population": 882,
+      "landlocked": true
+    },
+    "VC": {
+      "capital": "Kingstown",
+      "drives_on": "left",
+      "population": 110872,
+      "landlocked": false
+    },
+    "VE": {
+      "capital": "Caracas",
+      "drives_on": "right",
+      "population": 28517000,
+      "landlocked": false
+    },
+    "VG": {
+      "capital": "Road Town",
+      "drives_on": "left",
+      "population": 39471,
+      "landlocked": false
+    },
+    "VI": {
+      "capital": "Charlotte Amalie",
+      "drives_on": "right",
+      "population": 87146,
+      "landlocked": false
+    },
+    "VN": {
+      "capital": "Hanoi",
+      "drives_on": "right",
+      "population": 101343800,
+      "landlocked": false
+    },
+    "VU": {
+      "capital": "Port Vila",
+      "drives_on": "right",
+      "population": 321409,
+      "landlocked": false
+    },
+    "WF": {
+      "capital": "Mata-Utu",
+      "drives_on": "right",
+      "population": 11620,
+      "landlocked": false
+    },
+    "WS": {
+      "capital": "Apia",
+      "drives_on": "left",
+      "population": 205557,
+      "landlocked": false
+    },
+    "XK": {
+      "capital": "Pristina",
+      "drives_on": "right",
+      "population": 1585566,
+      "landlocked": true
+    },
+    "YE": {
+      "capital": "Sana'a",
+      "drives_on": "right",
+      "population": 32684503,
+      "landlocked": false
+    },
+    "YT": {
+      "capital": "Mamoudzou",
+      "drives_on": "right",
+      "population": 320901,
+      "landlocked": false
+    },
+    "ZA": {
+      "capital": "Pretoria",
+      "drives_on": "left",
+      "population": 63100945,
+      "landlocked": false
+    },
+    "ZM": {
+      "capital": "Lusaka",
+      "drives_on": "left",
+      "population": 19693423,
+      "landlocked": true
+    },
+    "ZW": {
+      "capital": "Harare",
+      "drives_on": "left",
+      "population": 17073087,
+      "landlocked": true
+    }
+  }
+}

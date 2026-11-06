@@ -28,7 +28,3 @@ class MapsController < ApplicationController
   end
 
 end
-
-def user_params
-  params.require(:maps).permit(:country)
-end

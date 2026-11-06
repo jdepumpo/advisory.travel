@@ -1,7 +1,6 @@
 /* Dependencies */
 @import 'tailwindcss';
 @import 'tippy.js/dist/tippy.css' layer(utilities);
-@import 'trix/dist/trix.css' layer(utilities);
 @import 'maplibre-gl/dist/maplibre-gl.css' layer(utilities);
 
 /* Components */

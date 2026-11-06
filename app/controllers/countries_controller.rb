@@ -1,7 +1,6 @@
 class CountriesController < ApplicationController
   before_action :set_country, only: :show
 
- # authorize_resource
 
   def index
     @q = Country.ransack(params[:q])
