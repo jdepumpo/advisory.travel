@@ -21,7 +21,7 @@ console_command = '/rails/bin/rails console'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
+  memory = '512mb' # measured ~175MB RSS under load (Rails 8.1, Ruby 4.0)
   cpu_kind = 'shared'
   cpus = 1
 
