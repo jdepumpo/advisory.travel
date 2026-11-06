@@ -4,7 +4,9 @@ require "yaml"
 require "json"
 require "nokogiri"
 
-# Refreshes countries and advisories from external sources.
+# Refreshes countries and advisories. Advisories come from the US and Canadian
+# governments; country details come from static_data/country_details.json
+# (regenerate with `rails countries:update_details`).
 #
 # All network fetching happens first; the database is only touched at the end,
 # inside a single transaction. If a source returns nothing (e.g. its page layout
@@ -12,7 +14,11 @@ require "nokogiri"
 class AdvisoryImporter
   class ImportError < StandardError; end
 
-  EXCLUDED_COUNTRIES = %w[MO AX AS BQ IO CX CC CK FK FO TF GI GL GP GU MQ YT NF MP PN RE BL SH MF PM SM GS SJ TK WF NU HM BV].freeze
+  # Territories with no advisory from either source
+  EXCLUDED_COUNTRIES = %w[AX IO CX CC FO TF NF PN SH GS SJ WF HM BV].freeze
+
+  OVERRIDES = YAML.load_file(Rails.root.join("static_data/advisory_overrides.yml")).freeze
+  COUNTRY_DETAILS = JSON.parse(File.read(Rails.root.join("static_data/country_details.json")))["countries"].freeze
 
   US_FEED_URL = "https://travel.state.gov/_res/rss/TAsTWs.xml".freeze
   CA_URL = "https://travel.gc.ca/travelling/advisories".freeze
@@ -55,7 +61,12 @@ class AdvisoryImporter
       Advisory.delete_all
       { "US" => us, "CA" => ca }.each do |issuer_name, advisories|
         advisories.each do |attrs|
-          country = by_alpha2[attrs.delete(:alpha2)] or next
+          country = by_alpha2[attrs[:alpha2]]
+          unless country
+            log "#{issuer_name}: advisory for #{attrs[:alpha2]}, which is not in the countries table"
+            next
+          end
+          attrs = attrs.except(:alpha2)
           Advisory.create!(attrs.merge(country: country, issuer: issuers[issuer_name]))
         end
       end
@@ -76,23 +87,15 @@ class AdvisoryImporter
     ISO3166::Country.pluck(:alpha2, :region, :subregion).filter_map do |alpha2, region, subregion|
       next if alpha2.blank? || EXCLUDED_COUNTRIES.include?(alpha2)
 
-      { alpha2: alpha2, name: ISO3166::Country[alpha2].common_name, region: region, subregion: subregion }
-        .merge(fetch_country_details(alpha2))
-    end
-  end
+      details = COUNTRY_DETAILS[alpha2] || {}
+      log "No country details for #{alpha2}" if details.empty?
 
-  # Returns {} on failure so existing values in the database are kept.
-  def fetch_country_details(alpha2)
-    info = JSON.parse(URI.open("https://restcountries.com/v3.1/alpha/#{alpha2}", read_timeout: 15).read)[0]
-    {
-      capital: info.dig("capital", 0),
-      drives_on: info.dig("car", "side"),
-      population: info["population"],
-      landlocked: info["landlocked"]
-    }
-  rescue StandardError => e
-    log "Could not fetch details for #{alpha2}: #{e.message}"
-    {}
+      {
+        alpha2: alpha2, name: ISO3166::Country[alpha2].common_name, region: region, subregion: subregion,
+        capital: details["capital"], drives_on: details["drives_on"],
+        population: details["population"], landlocked: details["landlocked"]
+      }.compact
+    end
   end
 
   def upsert_countries(countries)
@@ -110,17 +113,29 @@ class AdvisoryImporter
   # ---- US State Department ----
 
   def fetch_us_advisories
+    # First entry wins if a tag appears twice
     state_to_iso = YAML.load_file(Rails.root.join("static_data/state_to_iso.yml"))
+      .each_with_object({}) { |x, h| h[x["Tag"]] ||= [x["ISO"]] }
+    tag_to_iso = state_to_iso.merge(OVERRIDES["us_tags"])
+    by_title = OVERRIDES["us_titles"]
+    skipped = OVERRIDES.dig("skip", "us_tags").keys
 
     URI.open(US_FEED_URL) do |rss|
-      RSS::Parser.parse(rss, validate: false).items.filter_map do |item|
-        level = item.categories[0]&.content.to_s[/\p{Digit}/]&.to_i or next
+      RSS::Parser.parse(rss, validate: false).items.flat_map do |item|
+        level = item.categories[0]&.content.to_s[/\p{Digit}/]&.to_i or next []
         tag = item.categories[1]&.content
-        iso = state_to_iso.find { |x| x["Tag"] == tag }&.fetch("ISO") or next
+        next [] if skipped.include?(tag)
 
-        { alpha2: iso, level: level, body: item.description, pub_date: item.pubDate&.to_date, source: item.link }
+        title = item.title.to_s.squish
+        codes = by_title.find { |prefix, _| title.start_with?(prefix) }&.last || tag_to_iso[tag]
+        unless codes
+          log "US: no country for tag #{tag.inspect} (#{title})"
+          next []
+        end
+
+        codes.map { |iso| { alpha2: iso, level: level, summary: title, body: item.description, pub_date: item.pubDate&.to_date, source: item.link } }
       end
-    end
+    end.uniq { |a| [a[:alpha2], a[:summary]] } # the feed sometimes lists a country twice (e.g. Tonga)
   end
 
   # ---- Government of Canada ----
@@ -131,31 +146,36 @@ class AdvisoryImporter
     rows = doc.search("main table tbody tr")
     unknown = []
 
-    advisories = rows.filter_map do |row|
-      link = row.at_css("td a") or next
+    skipped = OVERRIDES.dig("skip", "ca_names").keys
+
+    advisories = rows.flat_map do |row|
+      link = row.at_css("td a") or next []
       name = link.text.strip
+      next [] if skipped.include?(name)
 
       level = ca_level(row)
       unless level
         unknown << "#{name}: #{row.at_css('td div')&.text.to_s.squish.inspect}"
-        next
+        next []
       end
 
-      iso = ISO3166::Country.find_country_by_any_name(name)
-      unless iso
-        log "CA: no ISO match for #{name.inspect}"
-        next
+      codes = OVERRIDES["ca_names"][name] || Array(ISO3166::Country.find_country_by_any_name(name)&.alpha2)
+      if codes.empty?
+        log "CA: no country for #{name.inspect}"
+        next []
       end
 
       # Prefer the semantic class; fall back to the last cell
       date_text = (row.at_css("td.timestamp") || row.css("td").last)&.text.to_s.strip
 
-      {
-        alpha2: iso.alpha2,
-        level: level,
-        pub_date: (Date.parse(date_text) rescue nil),
-        source: URI.join("https://travel.gc.ca", link["href"].to_s).to_s
-      }
+      codes.map do |iso|
+        {
+          alpha2: iso,
+          level: level,
+          pub_date: (Date.parse(date_text) rescue nil),
+          source: URI.join("https://travel.gc.ca", link["href"].to_s).to_s
+        }
+      end
     end
 
     if unknown.any?

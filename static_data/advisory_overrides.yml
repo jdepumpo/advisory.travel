@@ -1,0 +1,40 @@
+# Fixes for advisories the importer can't match to a country on its own.
+# Each entry maps a source's tag/name to one or more ISO 3166 alpha-2 codes.
+# Checked against both sources on 2026-11-05.
+
+# US State Department RSS: the second <category> tag. These take precedence
+# over static_data/state_to_iso.yml.
+us_tags:
+  TA: [TO]      # Tonga (feed uses TA, not FIPS TN)
+  MF: [MF]      # French Saint Martin (FIPS MF is Mayotte)
+  NT: [BL]      # Saint Barthelemy
+  MQ: [MQ]      # Martinique
+  A1: [BQ]      # Bonaire; Saba and Sint Eustatius (both Caribbean Netherlands)
+
+# US advisories whose tag is shared with another country, matched by title
+# prefix. Checked before us_tags.
+us_titles:
+  "Gaza": [PS]            # tagged IS, same as Israel
+  "The West Bank": [PS]   # tagged IS, same as Israel
+
+# Government of Canada: the destination name as shown in the advisories table.
+ca_names:
+  "Israel and Palestine": [IL, PS]
+  "Kosovo": [XK]
+  "Democratic Republic of Congo (Kinshasa)": [CD]
+  "Republic of Congo (Brazzaville)": [CG]
+  "Gambia, The": [GM]
+  "Timor-Leste (East Timor)": [TL]
+  "Micronesia (FSM)": [FM]
+  "Northern Marianas": [MP]
+  "Bonaire": [BQ]
+  "Saint Vincent & the Grenadines": [VC]
+
+# Deliberately not imported, so they are not logged as unmatched. Regions of a
+# country would add a second advisory from the same issuer to that country.
+skip:
+  us_tags:
+    A3: French West Indies - covered individually by GP, MQ, BL and MF
+  ca_names:
+    "Azores": Region of Portugal
+    "Canary Islands": Region of Spain

@@ -8,11 +8,6 @@
   @apply bg-gray-800;
 }
 
-/* Trix */
-trix-editor {
-  @apply bg-white border-gray-500 focus:border-amber-600 focus:ring-3 focus:ring-indigo-300/50;
-}
-
 #map_container {
   display: grid ;
   transition: grid-template 300ms;
