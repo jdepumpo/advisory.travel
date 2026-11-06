@@ -10,6 +10,9 @@ class User < ApplicationRecord
   has_one_attached :avatar
   has_many :articles, dependent: :destroy
 
+  def self.ransackable_attributes(_auth = nil) = %w[name email created_at]
+  def self.ransackable_associations(_auth = nil) = []
+
   def name
     @name ||= self[:name].presence || email.split("@").first
   end

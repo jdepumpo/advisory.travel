@@ -1,5 +1,5 @@
 import * as maplibregl from "maplibre-gl"
-import layers from 'protomaps-themes-base'
+import { layers, namedFlavor } from '@protomaps/basemaps'
 
 export default class Protomap {
   static onload() {
@@ -10,22 +10,27 @@ export default class Protomap {
 
   //create map
   static show(data) {
+  // MapLibre loads its worker from a separate file, which esbuild doesn't bundle
+  const workerUrl = document.querySelector('meta[name="maplibre-worker-url"]')?.content
+  if (workerUrl) maplibregl.setWorkerUrl(workerUrl)
+
   const map = new maplibregl.Map({
     container: 'map',
     style: {
       version:8,
-      glyphs:'https://cdn.protomaps.com/fonts/pbf/{fontstack}/{range}.pbf',
+      glyphs:'https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf',
+      sprite: 'https://protomaps.github.io/basemaps-assets/sprites/v4/grayscale',
       sources: {
           "protomaps": {
               type: "vector",
-              tiles: ["https://api.protomaps.com/tiles/v2/{z}/{x}/{y}.pbf?key=cfec896832ad2a2a"],
+              tiles: ["https://api.protomaps.com/tiles/v4/{z}/{x}/{y}.mvt?key=cfec896832ad2a2a"],
               minzoom: 0,
               maxzoom: 6,
               attribution: '<a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>'
           }
       },
       zoom: 2,
-      layers: layers("protomaps","grayscale")
+      layers: layers("protomaps", namedFlavor("grayscale"), { lang: "en" })
     }
   });
 

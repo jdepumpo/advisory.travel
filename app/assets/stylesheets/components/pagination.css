@@ -1,7 +1,12 @@
-.pagination .page {
+/* Pagy 43 series_nav: <nav class="pagy series-nav"><a ...>...</a></nav> */
+.pagy.series-nav a {
   @apply text-xl p-2;
 }
 
-.pagination .page.active {
-  @apply bg-amber-600 text-white rounded;
+.pagy.series-nav a[aria-current="page"] {
+  @apply bg-amber-600 text-white rounded-sm;
+}
+
+.pagy.series-nav a[aria-disabled="true"]:not([aria-current]) {
+  @apply text-neutral-400;
 }

@@ -42,14 +42,14 @@
               <%= link_to get_emoji_flag(country.alpha2), country_path(country.alpha2) %>
             </td>
             <td>
-              <%= link_to country.name, country_path(country.alpha2), class: "text-amber-900 outline-none font-bold" %>
+              <%= link_to country.name, country_path(country.alpha2), class: "text-amber-900 outline-hidden font-bold" %>
             </td>
             <td>
               <%= country.region %>
             </td>
             <td class="text-center">
               <% advisory_level = country.advisories.average(:level).to_i %>
-              <span class="px-4 py-2 rounded inline-block <%= advisory_level(advisory_level)[:color] %>">
+              <span class="px-4 py-2 rounded-sm inline-block <%= advisory_level(advisory_level)[:color] %>">
                 <%= advisory_level(advisory_level)[:name] %>
               </span>
             </td>
@@ -60,6 +60,6 @@
   </div>
 
   <div class="text-center mt-10">
-    <%== pagy_nav(@pagy) %>
+    <%== @pagy.series_nav %>
   </div>
 <% end %>
