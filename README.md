@@ -1,6 +1,6 @@
 <h1 align="center">Travel Advisories</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.5-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > Travel Advisories helps keep international travelers safe by providing country travel advisories that are updated continuously.
@@ -25,7 +25,3 @@ bundle install && yarn build
 fly deploy
 gh workflow run refresh-advisories.yml   # also purges the Cloudflare cache
 ```
-
-Pages are cached at Cloudflare for up to a day (`ApplicationController#allow_edge_caching`). The
-daily *Refresh advisories* workflow purges that cache after importing, so run it after each deploy
-too; otherwise cached pages keep pointing at the previous build's CSS/JS until it expires.
