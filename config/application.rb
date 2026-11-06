@@ -32,5 +32,9 @@ module RailsRalixTailwind
 
     # Serve error pages from the app itself rather than static files in public/
     config.exceptions_app = routes
+
+    # No logins or forms that change data, so no sessions. Without this, every
+    # response sets a cookie, and Cloudflare won't cache responses with cookies.
+    config.session_store :disabled
   end
 end

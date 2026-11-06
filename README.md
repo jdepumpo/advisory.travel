@@ -18,3 +18,14 @@
 ```sh
 bundle install && yarn build
 ```
+
+## Deploy
+
+```sh
+fly deploy
+gh workflow run refresh-advisories.yml   # also purges the Cloudflare cache
+```
+
+Pages are cached at Cloudflare for up to a day (`ApplicationController#allow_edge_caching`). The
+daily *Refresh advisories* workflow purges that cache after importing, so run it after each deploy
+too; otherwise cached pages keep pointing at the previous build's CSS/JS until it expires.

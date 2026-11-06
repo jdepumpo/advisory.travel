@@ -8,9 +8,8 @@ class MapsController < ApplicationController
 
   # Country shapes with each country's current average advisory level merged in.
   def countries
-    # Always revalidate: unchanged data costs a 304, and new levels show up
-    # right after the daily refresh instead of after a cache expiry.
-    expires_now
+    # Caching policy (browsers revalidate, Cloudflare caches until the daily
+    # purge) comes from ApplicationController#allow_edge_caching
     return unless stale?(etag: Advisory.maximum(:updated_at), public: true)
 
     levels = Country.joins(:advisories).group(:alpha2).average(:level)
