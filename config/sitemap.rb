@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sitemap_generator'
 
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "https://advisory.travel"
+SitemapGenerator::Sitemap.default_host = "https://travel-advisories.jfd.is"
 
 SitemapGenerator::Sitemap.create do
   add '/countries'

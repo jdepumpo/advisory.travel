@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://advisory.travel/sitemap.xml.gz
+Sitemap: https://travel-advisories.jfd.is/sitemap.xml.gz
